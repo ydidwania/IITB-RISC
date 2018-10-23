@@ -1,0 +1,9 @@
+Analysis & Synthesis Status : Successful - Tue Oct 23 22:57:46 2018
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Revision Name : Multicycle-IITB-RISC
+Top-level Entity Name : control_path
+Family : MAX V
+Total logic elements : 77
+Total pins : 61
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

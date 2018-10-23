@@ -1,0 +1,11 @@
+Fitter Status : Successful - Tue Oct 23 22:57:48 2018
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Revision Name : Multicycle-IITB-RISC
+Top-level Entity Name : control_path
+Family : MAX V
+Device : 5M1270ZT144C5
+Timing Models : Final
+Total logic elements : 77 / 1,270 ( 6 % )
+Total pins : 61 / 114 ( 54 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )
