@@ -1,0 +1,54 @@
+# do Multicycle-IITB-RISC_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying /home/jukebox/intelFPGA_lite/16.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux_state.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:57:20 on Oct 24,2018
+# vcom -reportprogress 300 -93 -work work /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux_state.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_state
+# -- Compiling architecture behave of mux_state
+# End time: 15:57:20 on Oct 24,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:57:20 on Oct 24,2018
+# vcom -reportprogress 300 -93 -work work /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity control_path
+# -- Compiling architecture behave of control_path
+# End time: 15:57:20 on Oct 24,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# stdin: <EOF>
+vsim work.control_path(behave)
+# vsim work.control_path(behave) 
+# Start time: 15:57:23 on Oct 24,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.control_path(behave)
+# Loading work.mux_state(behave)
+add wave -position insertpoint  \
+sim:/control_path/opcode
+add wave -position insertpoint  \
+sim:/control_path/s1
+add wave -position insertpoint  \
+sim:/control_path/current_state
+add wave -position insertpoint  \
+sim:/control_path/next_state
+force -freeze sim:/control_path/opcode 0101000000000000 0
+run

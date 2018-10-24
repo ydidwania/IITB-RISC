@@ -5,24 +5,24 @@ use ieee.std_logic_1164.all;
 
 entity control_path is
 	port (
-		opcode: in std_logic_vector (15 downto 0);
-		current_state: in std_logic_vector(4 downto 0);
+		opcode: in std_logic_vector (0 to 15);
+		current_state: in std_logic_vector(0 to 4);
 		C,Z,alu_z,F0,F1: in std_logic;
-		control_word: out std_logic_vector (29 downto 0);
-		next_state: out std_logic_vector ( 4 downto  0)
+		control_word: out std_logic_vector (0 to 29);
+		next_state: out std_logic_vector ( 0 to  4)
 	);
 end entity;
 architecture behave of control_path is
 
-	signal dec1,dec2,dec3,dec4,dec5,dec6,dec7 : std_logic_vector(4 downto 0);
+	signal dec1,dec2,dec3,dec4,dec5,dec6,dec7 : std_logic_vector(0 to 4);
 	signal s1: std_logic;
-	signal alu_op : std_logic_vector(1 downto 0);
+	signal alu_op : std_logic_vector(0 to 1);
 	
 	component mux_state is
 		port (
-			inp0, inp1: in std_logic_vector(4 downto 0);
+			inp0, inp1: in std_logic_vector(0 to 4);
 			s : in std_logic;
-			z : out std_logic_vector(4 downto 0)
+			z : out std_logic_vector(0 to 4)
 		);
 	end component;
 
@@ -45,43 +45,43 @@ d7: mux_state port map(inp0=>"10010", inp1=>"00001",s=>F1, z=>dec7);
 ------------------------------------------------
 	-- s1=1 if opcode=SW, else s1=0 if opcode=LW
 	process(opcode)
-		variable f1,f0 : boolean;
+		variable f_1,f_0 : boolean;
 	begin
-			if (opcode(3 downto 0)="0101") then --SW
+			if (opcode(0 to 3)="0101") then --SW
 				s1<='1';
 			else
 				s1<='0';
 			end if;
 			
-			if opcode(3 downto 0)="0000" or opcode(3 downto 0)="0010" then --ADD/NAND
-				f1 := opcode(14)='1';
-				f0 := opcode(15)='1';
-				if (not f1 and not f0) or (f1 and not f0 and C='1') or (not f1 and f0 and Z='1') then
+			if opcode(0 to 3)="0000" or opcode(0 to 3)="0010" then --ADD/NAND
+				f_1 := opcode(14)='1';
+				f_0 := opcode(15)='1';
+				if (not f_1 and not f_0) or (f_1 and not f_0 and C='1') or (not f_1 and f_0 and Z='1') then
 					dec1<="00011"; --S3 if 1
 				else
 					dec1<="00001"; --S1 if 0
 				end if;
-			elsif opcode(3 downto 0)="0001" then --ADI
+			elsif opcode(0 to 3)="0001" then --ADI
 				dec1<="00100";
-			elsif opcode(3 downto 0)="0011" then --LHI
+			elsif opcode(0 to 3)="0011" then --LHI
 				dec1<="00110";
-			elsif opcode(2 downto 0)="010" then --LW/SW
+			elsif opcode(0 to 2)="010" then --LW/SW
 				dec1<="00111";
-			elsif opcode(3 downto 0)="1100" then --BEQ
+			elsif opcode(0 to 3)="1100" then --BEQ
 				dec1<="01011";
-			elsif opcode(3 downto 0)="1000" then --JAL 
+			elsif opcode(0 to 3)="1000" then --JAL 
 				dec1<="01101";
-			elsif opcode(3 downto 0)="1001" then --JLR 
+			elsif opcode(0 to 3)="1001" then --JLR 
 				dec1<="01110";
-			elsif opcode(3 downto 0)="0110" then --LM
+			elsif opcode(0 to 3)="0110" then --LM
 				dec1<="01111";
-			elsif opcode(3 downto 0)="0101" then --SM
+			elsif opcode(0 to 3)="0101" then --SM
 				dec1<="10001";
 			else   -- move to state1 and fetch next instruction.
 				dec1<="00001";
 			end if;
 			
-			if opcode(3 downto 0)="0000" then
+			if opcode(0 to 3)="0000" then
 				alu_op<="00";
 			else
 				alu_op<="10";
