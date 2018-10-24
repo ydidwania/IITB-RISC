@@ -1,5 +1,5 @@
 Assembler report for Multicycle-IITB-RISC
-Wed Oct 24 15:57:03 2018
+Wed Oct 24 22:33:49 2018
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Oct 24 15:57:03 2018 ;
+; Assembler Status      ; Successful - Wed Oct 24 22:33:49 2018 ;
 ; Revision Name         ; Multicycle-IITB-RISC                  ;
 ; Top-level Entity Name ; control_path                          ;
 ; Family                ; MAX V                                 ;
@@ -68,8 +68,8 @@ agreement for further details.
 ; Option         ; Setting                           ;
 +----------------+-----------------------------------+
 ; Device         ; 5M1270ZT144C5                     ;
-; JTAG usercode  ; 0x00620443                        ;
-; Checksum       ; 0x00620464                        ;
+; JTAG usercode  ; 0x00620680                        ;
+; Checksum       ; 0x006206A4                        ;
 +----------------+-----------------------------------+
 
 
@@ -79,15 +79,15 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Wed Oct 24 15:57:02 2018
+    Info: Processing started: Wed Oct 24 22:33:48 2018
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Multicycle-IITB-RISC -c Multicycle-IITB-RISC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 791 megabytes
-    Info: Processing ended: Wed Oct 24 15:57:03 2018
+    Info: Processing ended: Wed Oct 24 22:33:49 2018
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 

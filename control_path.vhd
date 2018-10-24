@@ -8,7 +8,7 @@ entity control_path is
 		opcode: in std_logic_vector (0 to 15);
 		current_state: in std_logic_vector(0 to 4);
 		C,Z,alu_z,F0,F1: in std_logic;
-		control_word: out std_logic_vector (0 to 29);
+		control_word: out std_logic_vector (0 to 27);
 		next_state: out std_logic_vector ( 0 to  4)
 	);
 end entity;
@@ -36,7 +36,7 @@ d5: mux_state port map(inp0=>"10000", inp1=>"00001",s=>F1, z=>dec5);
 d6: mux_state port map(inp0=>"10010", inp1=>"00001",s=>F0, z=>dec6);
 d7: mux_state port map(inp0=>"10010", inp1=>"00001",s=>F1, z=>dec7);
 
-
+--IGNORE
 -----------------------------------------------
 -- PLEASE NOTE THAT OPCODE(0) refers to the first bit(MSB)
 -- in the intstruction encoding provided.
@@ -92,26 +92,26 @@ d7: mux_state port map(inp0=>"10010", inp1=>"00001",s=>F1, z=>dec7);
 	process(current_state,dec1,dec2,dec3,dec4,dec5,dec6,dec7,alu_op)
 	begin
 		case(current_state) is 
-			when "00001" => control_word<="110100000100000001000000000101"; next_state<="00010";
-			when "00010" => control_word<="000010110000000010000000000000"; next_state<=dec1;
-			when "00011" => control_word<="00000010" & alu_op & "00000000000010001001"; next_state<="10011";
-			when "00100" => control_word<="000000100100000000000010010101"; next_state<="00101";
-			when "00101" => control_word<="000001000000000000101100000000"; next_state<="00001";
-			when "00110" => control_word<="000001000000000000010100000000"; next_state<="00001";
-			when "00111" => control_word<="000000010100000000000001010001"; next_state<=dec2;
-			when "01000" => control_word<="010000010000010000000000000000"; next_state<="01001";
-			when "01001" => control_word<="000001000000000000011000011100"; next_state<="00001";
-			when "01010" => control_word<="001000000000010100000000000000"; next_state<="00001";
-			when "01011" => control_word<="000000001100000000000000001001"; next_state<=dec3;
-			when "01100" => control_word<="100000000000000000000000000010"; next_state<="00001";
-			when "01101" => control_word<="100001000100000000010000000011"; next_state<="00001";
-			when "01110" => control_word<="100001000001000000010000000000"; next_state<="00001";
-			when "01111" => control_word<="010010110100000000000010001101"; next_state<=dec4;
-			when "10000" => control_word<="010001110100100000001010001101"; next_state<=dec5;
-			when "10001" => control_word<="000000010000000000000000100000"; next_state<=dec6;
-			when "10010" => control_word<="001000110100100010000010101101"; next_state<=dec7;
-			when "10011" => control_word<="000001000000000000111100000000"; next_state<="00001";
-			when others => control_word<="000000000000000000000000000000"; next_state<="00001";
+			when "00001" => control_word<="1101000001000001000000000101"; next_state<="00010";
+			when "00010" => control_word<="0000101100000010000000000000"; next_state<=dec1;
+			when "00011" => control_word<="00000010"& alu_op &"000000000010001001"; next_state<="10011";
+			when "00100" => control_word<="0000001001000000000010010101"; next_state<="00101";
+			when "00101" => control_word<="0000010000000000101100000000"; next_state<="00001";
+			when "00110" => control_word<="0000010000000000010100000000"; next_state<="00001";
+			when "00111" => control_word<="0000000101000000000001010001"; next_state<=dec2;
+			when "01000" => control_word<="0100000100001000000000000000"; next_state<="01001";
+			when "01001" => control_word<="0000010000000000011000011100"; next_state<="00001";
+			when "01010" => control_word<="0010000000001100000000000000"; next_state<="00001";
+			when "01011" => control_word<="0000000011000000000000001001"; next_state<=dec3;
+			when "01100" => control_word<="1000000000000000000000000010"; next_state<="00001";
+			when "01101" => control_word<="1000010001000000010000000011"; next_state<="00001";
+			when "01110" => control_word<="1000010000100000010000000000"; next_state<="00001";
+			when "01111" => control_word<="0100101101000000000010001101"; next_state<=dec4;
+			when "10000" => control_word<="0100011101010000001010001101"; next_state<=dec5;
+			when "10001" => control_word<="0000000100000000000000100000"; next_state<=dec6;
+			when "10010" => control_word<="0010001101010010000010101101"; next_state<=dec7;
+			when "10011" => control_word<="0000010000000000111100000000"; next_state<="00001";
+			when others => control_word<="0000000000000000000000000000"; next_state<="00001";
 		end case;
 	------------------------------
 	end process;

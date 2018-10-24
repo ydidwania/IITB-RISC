@@ -1,5 +1,5 @@
 Flow report for Multicycle-IITB-RISC
-Wed Oct 24 15:57:06 2018
+Wed Oct 24 22:33:52 2018
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Wed Oct 24 15:57:06 2018       ;
+; Flow Status           ; Successful - Wed Oct 24 22:33:52 2018       ;
 ; Quartus Prime Version ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name         ; Multicycle-IITB-RISC                        ;
 ; Top-level Entity Name ; control_path                                ;
@@ -49,7 +49,7 @@ agreement for further details.
 ; Device                ; 5M1270ZT144C5                               ;
 ; Timing Models         ; Final                                       ;
 ; Total logic elements  ; 79 / 1,270 ( 6 % )                          ;
-; Total pins            ; 61 / 114 ( 54 % )                           ;
+; Total pins            ; 59 / 114 ( 52 % )                           ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
 +-----------------------+---------------------------------------------+
@@ -60,7 +60,7 @@ agreement for further details.
 +-------------------+----------------------+
 ; Option            ; Setting              ;
 +-------------------+----------------------+
-; Start date & time ; 10/24/2018 15:56:40  ;
+; Start date & time ; 10/24/2018 22:33:30  ;
 ; Main task         ; Compilation          ;
 ; Revision Name     ; Multicycle-IITB-RISC ;
 +-------------------+----------------------+
@@ -71,7 +71,7 @@ agreement for further details.
 +-------------------------------+--------------------------------+----------------------+-------------+----------------+
 ; Assignment Name               ; Value                          ; Default Value        ; Entity Name ; Section Id     ;
 +-------------------------------+--------------------------------+----------------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID         ; 66610803205901.154037680009093 ; --                   ; --          ; --             ;
+; COMPILER_SIGNATURE_ID         ; 66610803205901.154040061027089 ; --                   ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT        ; Verilog Hdl                    ; --                   ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL           ; ModelSim-Altera (Verilog)      ; <None>               ; --          ; --             ;
 ; EDA_TIME_SCALE                ; 1 ps                           ; --                   ; --          ; eda_simulation ;
@@ -88,12 +88,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 949 MB              ; 00:00:28                           ;
-; Fitter                    ; 00:00:06     ; 1.0                     ; 1040 MB             ; 00:00:02                           ;
+; Analysis & Synthesis      ; 00:00:15     ; 1.0                     ; 944 MB              ; 00:00:34                           ;
+; Fitter                    ; 00:00:02     ; 1.0                     ; 1040 MB             ; 00:00:01                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 791 MB              ; 00:00:00                           ;
 ; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 723 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 1026 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:21     ; --                      ; --                  ; 00:00:31                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 1026 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:20     ; --                      ; --                  ; 00:00:37                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

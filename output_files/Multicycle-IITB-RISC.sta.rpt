@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Multicycle-IITB-RISC
-Wed Oct 24 15:57:05 2018
+Wed Oct 24 22:33:50 2018
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -191,9 +191,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; control_word[7]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; control_word[8]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; control_word[9]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; control_word[10] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; control_word[11] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; control_word[12] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; control_word[13] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; control_word[14] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; control_word[15] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; control_word[16] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; control_word[17] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -207,8 +209,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; control_word[25] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; control_word[26] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; control_word[27] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; control_word[28] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; control_word[29] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; next_state[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; next_state[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; next_state[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -256,9 +256,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; control_word[7]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; control_word[8]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; control_word[9]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; control_word[10] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; control_word[11] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; control_word[12] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; control_word[13] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; control_word[14] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; control_word[15] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; control_word[16] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; control_word[17] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -272,8 +274,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; control_word[25] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; control_word[26] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; control_word[27] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; control_word[28] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; control_word[29] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; next_state[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; next_state[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; next_state[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -288,7 +288,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Wed Oct 24 15:57:04 2018
+    Info: Processing started: Wed Oct 24 22:33:49 2018
 Info: Command: quartus_sta Multicycle-IITB-RISC -c Multicycle-IITB-RISC
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -315,7 +315,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 723 megabytes
-    Info: Processing ended: Wed Oct 24 15:57:05 2018
+    Info: Processing ended: Wed Oct 24 22:33:50 2018
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
