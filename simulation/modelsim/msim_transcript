@@ -1,606 +1,91 @@
-# do Multicycle-IITB-RISC_run_msim_gate_verilog.do
-# if {[file exists gate_work]} {
-# 	vdel -lib gate_work -all
+# do Multicycle-IITB-RISC_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
 # }
-# vlib gate_work
-# vmap work gate_work
+# vlib rtl_work
+# vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap work gate_work 
+# vmap work rtl_work 
 # Copying /home/jukebox/intelFPGA_lite/16.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+. {Multicycle-IITB-RISC.vo}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:50:04 on Oct 24,2018
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." Multicycle-IITB-RISC.vo 
-# -- Compiling module control_path
-# 
-# Top level modules:
-# 	control_path
-# End time: 22:50:04 on Oct 24,2018, Elapsed time: 0:00:00
+# vcom -93 -work work {/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:24:10 on Oct 26,2018
+# vcom -reportprogress 300 -93 -work work /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity reg_file
+# -- Compiling architecture behave of reg_file
+# End time: 00:24:11 on Oct 26,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_16bit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:24:11 on Oct 26,2018
+# vcom -reportprogress 300 -93 -work work /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_16bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg_16bit
+# -- Compiling architecture behave of reg_16bit
+# End time: 00:24:11 on Oct 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # 
 # stdin: <EOF>
-vsim work.control_path
-# vsim work.control_path 
-# Start time: 22:50:09 on Oct 24,2018
-# Loading work.control_path
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(155): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(165): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(175): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(185): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(195): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(231): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(241): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(278): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(314): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(350): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(387): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(423): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(459): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(495): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(531): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(568): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(604): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(640): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(676): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(712): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(749): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(785): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(822): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(858): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(894): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(931): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(967): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1003): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1039): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1075): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1111): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1147): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1183): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1219): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1255): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1291): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1327): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1363): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1400): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1436): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1446): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1456): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1466): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1476): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1512): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1548): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1585): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1621): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1658): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1694): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1731): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1767): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1803): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1839): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1875): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1911): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1948): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(1984): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2020): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2056): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2092): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2102): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2112): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2148): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2158): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2194): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2230): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2266): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2302): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2338): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2374): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2410): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2446): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2482): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2492): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2502): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2512): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2522): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2558): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2594): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2630): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2666): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2702): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2738): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2774): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2810): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2846): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2882): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2918): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2954): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(2990): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3026): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3062): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3098): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3134): Instantiation of 'maxv_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3170): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3180): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3190): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3200): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3210): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3220): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3230): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3240): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3250): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3260): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3270): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3280): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3290): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3300): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3310): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3320): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3330): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3340): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3350): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3360): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3370): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3380): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3390): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3400): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3410): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3420): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3430): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3440): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3450): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3460): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3470): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3480): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3490): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3500): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3510): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3520): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3530): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3540): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3550): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3560): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3570): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3580): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(3590): Instantiation of 'maxv_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /control_path File: Multicycle-IITB-RISC.vo
-#         Searched libraries:
-#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
-# Error loading design
-# End time: 22:50:10 on Oct 24,2018, Elapsed time: 0:00:01
-# Errors: 138, Warnings: 0
-vsim rtl_work.control_path(behave)
-# vsim rtl_work.control_path(behave) 
-# Start time: 22:51:31 on Oct 24,2018
+vsim work.reg_file(behave)
+# vsim work.reg_file(behave) 
+# Start time: 00:24:18 on Oct 26,2018
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading rtl_work.control_path(behave)
-# Loading rtl_work.mux_state(behave)
+# Loading ieee.numeric_std(body)
+# Loading work.reg_file(behave)
+# Loading work.reg_16bit(behave)
 add wave -position insertpoint  \
-sim:/control_path/opcode
+sim:/reg_file/a1
 add wave -position insertpoint  \
-sim:/control_path/s1
-force -freeze sim:/control_path/opcode 010100000000 0
-# Value length (12) does not equal array index length (16).
-# 
-# ** Error: (vsim-4011) Invalid force value: 010100000000 0.
-# 
-force -freeze sim:/control_path/opcode 0101000000000000 0
+sim:/reg_file/a1
+add wave -position insertpoint  \
+sim:/reg_file/a3
+add wave -position insertpoint  \
+sim:/reg_file/a3
+add wave -position 1 sim:/reg_file/a3
+add wave -position 1 sim:/reg_file/a3
+add wave -position insertpoint  \
+sim:/reg_file/d3
+add wave -position insertpoint  \
+sim:/reg_file/d1
+add wave -position insertpoint  \
+sim:/reg_file/enable
+add wave -position insertpoint  \
+sim:/reg_file/wr_en
+add wave -position insertpoint  \
+sim:/reg_file/clk
+force -freeze sim:/reg_file/clk 1 0, 0 {50 ps} -r 100
 run
-force -freeze sim:/control_path/opcode 0110000000000000 0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /reg_file
 run
-# End time: 22:54:25 on Oct 24,2018, Elapsed time: 0:02:54
-# Errors: 1, Warnings: 0
+run
+force -freeze sim:/reg_file/wr_en 1 0
+force -freeze sim:/reg_file/a3 010 0
+force -freeze sim:/reg_file/d3 1100110011001100 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 300 ps  Iteration: 1  Instance: /reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 300 ps  Iteration: 1  Instance: /reg_file
+force -freeze sim:/reg_file/a1 010 0
+force -freeze sim:/reg_file/wr_en 0 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 400 ps  Iteration: 2  Instance: /reg_file
+# End time: 00:26:46 on Oct 26,2018, Elapsed time: 0:02:28
+# Errors: 0, Warnings: 6

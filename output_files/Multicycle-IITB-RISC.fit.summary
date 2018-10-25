@@ -1,11 +1,11 @@
-Fitter Status : Successful - Thu Oct 25 20:42:55 2018
+Fitter Status : Successful - Fri Oct 26 00:22:33 2018
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : Multicycle-IITB-RISC
-Top-level Entity Name : priority_encoder
+Top-level Entity Name : reg_file
 Family : MAX V
 Device : 5M1270ZT144C5
 Timing Models : Final
-Total logic elements : 27 / 1,270 ( 2 % )
-Total pins : 15 / 114 ( 13 % )
+Total logic elements : 168 / 1,270 ( 13 % )
+Total pins : 75 / 114 ( 66 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

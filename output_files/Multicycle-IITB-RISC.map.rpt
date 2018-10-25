@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Multicycle-IITB-RISC
-Thu Oct 25 20:42:54 2018
+Fri Oct 26 00:22:31 2018
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -42,13 +42,13 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Oct 25 20:42:54 2018       ;
+; Analysis & Synthesis Status ; Successful - Fri Oct 26 00:22:31 2018       ;
 ; Quartus Prime Version       ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name               ; Multicycle-IITB-RISC                        ;
-; Top-level Entity Name       ; priority_encoder                            ;
+; Top-level Entity Name       ; reg_file                                    ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 27                                          ;
-; Total pins                  ; 15                                          ;
+; Total logic elements        ; 296                                         ;
+; Total pins                  ; 75                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -60,7 +60,7 @@ agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value        ;
 +----------------------------------------------------------------------------+--------------------+----------------------+
 ; Device                                                                     ; 5M1270ZT144C5      ;                      ;
-; Top-level entity name                                                      ; priority_encoder   ; Multicycle-IITB-RISC ;
+; Top-level entity name                                                      ; reg_file           ; Multicycle-IITB-RISC ;
 ; Family name                                                                ; MAX V              ; Cyclone V            ;
 ; Use smart compilation                                                      ; Off                ; Off                  ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                   ;
@@ -141,13 +141,14 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                  ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                           ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
-; priority_encoder.vhd             ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
+; reg_file.vhd                     ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd  ;         ;
+; reg_16bit.vhd                    ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_16bit.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -155,42 +156,50 @@ agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 27    ;
-;     -- Combinational with no register       ; 19    ;
-;     -- Register only                        ; 0     ;
-;     -- Combinational with a register        ; 8     ;
+; Total logic elements                        ; 296   ;
+;     -- Combinational with no register       ; 168   ;
+;     -- Register only                        ; 128   ;
+;     -- Combinational with a register        ; 0     ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 15    ;
-;     -- 3 input functions                    ; 4     ;
-;     -- 2 input functions                    ; 8     ;
+;     -- 4 input functions                    ; 136   ;
+;     -- 3 input functions                    ; 32    ;
+;     -- 2 input functions                    ; 0     ;
 ;     -- 1 input functions                    ; 0     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 27    ;
+;     -- normal mode                          ; 296   ;
 ;     -- arithmetic mode                      ; 0     ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
 ;     -- synchronous clear/load mode          ; 0     ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 8     ;
-; I/O pins                                    ; 15    ;
+; Total registers                             ; 128   ;
+; I/O pins                                    ; 75    ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 8     ;
-; Total fan-out                               ; 101   ;
-; Average fan-out                             ; 2.40  ;
+; Maximum fan-out                             ; 128   ;
+; Total fan-out                               ; 1072  ;
+; Average fan-out                             ; 2.89  ;
 +---------------------------------------------+-------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                     ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name      ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+------------------+--------------+
-; |priority_encoder          ; 27 (27)     ; 8            ; 0          ; 15   ; 0            ; 19 (19)      ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |priority_encoder   ; priority_encoder ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+------------------+--------------+
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name      ; Entity Name ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------+-------------+--------------+
+; |reg_file                  ; 296 (168)   ; 128          ; 0          ; 75   ; 0            ; 168 (168)    ; 128 (0)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file                ; reg_file    ; work         ;
+;    |reg_16bit:r0|          ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|reg_16bit:r0   ; reg_16bit   ; work         ;
+;    |reg_16bit:r1|          ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|reg_16bit:r1   ; reg_16bit   ; work         ;
+;    |reg_16bit:r2|          ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|reg_16bit:r2   ; reg_16bit   ; work         ;
+;    |reg_16bit:r3|          ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|reg_16bit:r3   ; reg_16bit   ; work         ;
+;    |reg_16bit:r4|          ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|reg_16bit:r4   ; reg_16bit   ; work         ;
+;    |reg_16bit:r5|          ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|reg_16bit:r5   ; reg_16bit   ; work         ;
+;    |reg_16bit:r6|          ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|reg_16bit:r6   ; reg_16bit   ; work         ;
+;    |reg_16bit:reg7|        ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|reg_16bit:reg7 ; reg_16bit   ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -199,12 +208,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 8     ;
+; Total registers                              ; 128   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 128   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -214,7 +223,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |priority_encoder|Z        ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |reg_file|Mux14            ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |reg_file|Mux17            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -224,10 +234,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Thu Oct 25 20:42:41 2018
+    Info: Processing started: Fri Oct 26 00:22:17 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Multicycle-IITB-RISC -c Multicycle-IITB-RISC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file reg_file.vhd
+    Info (12022): Found design unit 1: reg_file-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd Line: 15
+    Info (12023): Found entity 1: reg_file File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file reg_16bit.vhd
+    Info (12022): Found design unit 1: reg_16bit-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_16bit.vhd Line: 11
+    Info (12023): Found entity 1: reg_16bit File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_16bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file priority_encoder.vhd
     Info (12022): Found design unit 1: priority_encoder-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 14
     Info (12023): Found entity 1: priority_encoder File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 6
@@ -237,28 +253,20 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux_sta
 Info (12021): Found 2 design units, including 1 entities, in source file control_path.vhd
     Info (12022): Found design unit 1: control_path-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 15
     Info (12023): Found entity 1: control_path File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 6
-Info (12127): Elaborating entity "priority_encoder" for the top level hierarchy
-Warning (13034): The following nodes have both tri-state and non-tri-state drivers
-    Warning (13035): Inserted always-enabled tri-state buffer between "Z[2]" and its non-tri-state driver. File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
-    Warning (13035): Inserted always-enabled tri-state buffer between "Z[1]" and its non-tri-state driver. File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
-    Warning (13035): Inserted always-enabled tri-state buffer between "Z[0]" and its non-tri-state driver. File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
-Info (13060): One or more bidirectional pins are fed by always enabled tri-state buffers
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "Z[2]" is moved to its source File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "Z[1]" is moved to its source File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "Z[0]" is moved to its source File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
-Warning (13009): TRI or OPNDRN buffers permanently enabled
-    Warning (13010): Node "Z[2]~synth" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
-    Warning (13010): Node "Z[1]~synth" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
-    Warning (13010): Node "Z[0]~synth" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
-Info (21057): Implemented 42 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 2 output pins
-    Info (21060): Implemented 3 bidirectional pins
-    Info (21061): Implemented 27 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 939 megabytes
-    Info: Processing ended: Thu Oct 25 20:42:54 2018
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:28
+Info (12127): Elaborating entity "reg_file" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at reg_file.vhd(46): signal "registers_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd Line: 46
+Warning (10492): VHDL Process Statement warning at reg_file.vhd(49): signal "registers_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd Line: 49
+Warning (10492): VHDL Process Statement warning at reg_file.vhd(53): signal "wr_en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd Line: 53
+Info (12128): Elaborating entity "reg_16bit" for hierarchy "reg_16bit:r0" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd Line: 30
+Warning (10492): VHDL Process Statement warning at reg_16bit.vhd(15): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_16bit.vhd Line: 15
+Info (21057): Implemented 371 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 27 input pins
+    Info (21059): Implemented 48 output pins
+    Info (21061): Implemented 296 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 934 megabytes
+    Info: Processing ended: Fri Oct 26 00:22:31 2018
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:32
 
 
