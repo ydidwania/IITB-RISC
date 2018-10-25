@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Multicycle-IITB-RISC
-Wed Oct 24 22:33:45 2018
+Thu Oct 25 20:42:54 2018
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -14,13 +14,8 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "mux_state:d7"
- 10. Port Connectivity Checks: "mux_state:d6"
- 11. Port Connectivity Checks: "mux_state:d5"
- 12. Port Connectivity Checks: "mux_state:d4"
- 13. Port Connectivity Checks: "mux_state:d3"
- 14. Port Connectivity Checks: "mux_state:d2"
- 15. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -47,13 +42,13 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Oct 24 22:33:45 2018       ;
+; Analysis & Synthesis Status ; Successful - Thu Oct 25 20:42:54 2018       ;
 ; Quartus Prime Version       ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name               ; Multicycle-IITB-RISC                        ;
-; Top-level Entity Name       ; control_path                                ;
+; Top-level Entity Name       ; priority_encoder                            ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 79                                          ;
-; Total pins                  ; 59                                          ;
+; Total logic elements        ; 27                                          ;
+; Total pins                  ; 15                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -65,7 +60,7 @@ agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value        ;
 +----------------------------------------------------------------------------+--------------------+----------------------+
 ; Device                                                                     ; 5M1270ZT144C5      ;                      ;
-; Top-level entity name                                                      ; control_path       ; Multicycle-IITB-RISC ;
+; Top-level entity name                                                      ; priority_encoder   ; Multicycle-IITB-RISC ;
 ; Family name                                                                ; MAX V              ; Cyclone V            ;
 ; Use smart compilation                                                      ; Off                ; Off                  ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                   ;
@@ -146,57 +141,56 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                              ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                       ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
-; mux_state.vhd                    ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux_state.vhd    ;         ;
-; control_path.vhd                 ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                  ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
+; priority_encoder.vhd             ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                    ;
-+---------------------------------------------+------------------+
-; Resource                                    ; Usage            ;
-+---------------------------------------------+------------------+
-; Total logic elements                        ; 79               ;
-;     -- Combinational with no register       ; 79               ;
-;     -- Register only                        ; 0                ;
-;     -- Combinational with a register        ; 0                ;
-;                                             ;                  ;
-; Logic element usage by number of LUT inputs ;                  ;
-;     -- 4 input functions                    ; 57               ;
-;     -- 3 input functions                    ; 11               ;
-;     -- 2 input functions                    ; 11               ;
-;     -- 1 input functions                    ; 0                ;
-;     -- 0 input functions                    ; 0                ;
-;                                             ;                  ;
-; Logic elements by mode                      ;                  ;
-;     -- normal mode                          ; 79               ;
-;     -- arithmetic mode                      ; 0                ;
-;     -- qfbk mode                            ; 0                ;
-;     -- register cascade mode                ; 0                ;
-;     -- synchronous clear/load mode          ; 0                ;
-;     -- asynchronous clear/load mode         ; 0                ;
-;                                             ;                  ;
-; Total registers                             ; 0                ;
-; I/O pins                                    ; 59               ;
-; Maximum fan-out node                        ; current_state[2] ;
-; Maximum fan-out                             ; 40               ;
-; Total fan-out                               ; 316              ;
-; Average fan-out                             ; 2.29             ;
-+---------------------------------------------+------------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 27    ;
+;     -- Combinational with no register       ; 19    ;
+;     -- Register only                        ; 0     ;
+;     -- Combinational with a register        ; 8     ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 15    ;
+;     -- 3 input functions                    ; 4     ;
+;     -- 2 input functions                    ; 8     ;
+;     -- 1 input functions                    ; 0     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 27    ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 8     ;
+; I/O pins                                    ; 15    ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 8     ;
+; Total fan-out                               ; 101   ;
+; Average fan-out                             ; 2.40  ;
++---------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                 ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name  ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+--------------+
-; |control_path              ; 79 (79)     ; 0            ; 0          ; 59   ; 0            ; 79 (79)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |control_path       ; control_path ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                     ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name      ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+------------------+--------------+
+; |priority_encoder          ; 27 (27)     ; 8            ; 0          ; 15   ; 0            ; 19 (19)      ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |priority_encoder   ; priority_encoder ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -205,7 +199,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 8     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -215,85 +209,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------+
-; Port Connectivity Checks: "mux_state:d7"     ;
-+------------+-------+----------+--------------+
-; Port       ; Type  ; Severity ; Details      ;
-+------------+-------+----------+--------------+
-; inp0[3..2] ; Input ; Info     ; Stuck at GND ;
-; inp0[4]    ; Input ; Info     ; Stuck at VCC ;
-; inp0[1]    ; Input ; Info     ; Stuck at VCC ;
-; inp0[0]    ; Input ; Info     ; Stuck at GND ;
-; inp1[4..1] ; Input ; Info     ; Stuck at GND ;
-; inp1[0]    ; Input ; Info     ; Stuck at VCC ;
-+------------+-------+----------+--------------+
-
-
-+----------------------------------------------+
-; Port Connectivity Checks: "mux_state:d6"     ;
-+------------+-------+----------+--------------+
-; Port       ; Type  ; Severity ; Details      ;
-+------------+-------+----------+--------------+
-; inp0[3..2] ; Input ; Info     ; Stuck at GND ;
-; inp0[4]    ; Input ; Info     ; Stuck at VCC ;
-; inp0[1]    ; Input ; Info     ; Stuck at VCC ;
-; inp0[0]    ; Input ; Info     ; Stuck at GND ;
-; inp1[4..1] ; Input ; Info     ; Stuck at GND ;
-; inp1[0]    ; Input ; Info     ; Stuck at VCC ;
-+------------+-------+----------+--------------+
-
-
-+----------------------------------------------+
-; Port Connectivity Checks: "mux_state:d5"     ;
-+------------+-------+----------+--------------+
-; Port       ; Type  ; Severity ; Details      ;
-+------------+-------+----------+--------------+
-; inp0[3..0] ; Input ; Info     ; Stuck at GND ;
-; inp0[4]    ; Input ; Info     ; Stuck at VCC ;
-; inp1[4..1] ; Input ; Info     ; Stuck at GND ;
-; inp1[0]    ; Input ; Info     ; Stuck at VCC ;
-+------------+-------+----------+--------------+
-
-
-+----------------------------------------------+
-; Port Connectivity Checks: "mux_state:d4"     ;
-+------------+-------+----------+--------------+
-; Port       ; Type  ; Severity ; Details      ;
-+------------+-------+----------+--------------+
-; inp0[3..0] ; Input ; Info     ; Stuck at GND ;
-; inp0[4]    ; Input ; Info     ; Stuck at VCC ;
-; inp1[4..1] ; Input ; Info     ; Stuck at GND ;
-; inp1[0]    ; Input ; Info     ; Stuck at VCC ;
-+------------+-------+----------+--------------+
-
-
-+----------------------------------------------+
-; Port Connectivity Checks: "mux_state:d3"     ;
-+------------+-------+----------+--------------+
-; Port       ; Type  ; Severity ; Details      ;
-+------------+-------+----------+--------------+
-; inp0[4..1] ; Input ; Info     ; Stuck at GND ;
-; inp0[0]    ; Input ; Info     ; Stuck at VCC ;
-; inp1[3..2] ; Input ; Info     ; Stuck at VCC ;
-; inp1[1..0] ; Input ; Info     ; Stuck at GND ;
-; inp1[4]    ; Input ; Info     ; Stuck at GND ;
-+------------+-------+----------+--------------+
-
-
-+----------------------------------------------+
-; Port Connectivity Checks: "mux_state:d2"     ;
-+------------+-------+----------+--------------+
-; Port       ; Type  ; Severity ; Details      ;
-+------------+-------+----------+--------------+
-; inp0[4]    ; Input ; Info     ; Stuck at GND ;
-; inp0[3]    ; Input ; Info     ; Stuck at VCC ;
-; inp0[2]    ; Input ; Info     ; Stuck at GND ;
-; inp0[1]    ; Input ; Info     ; Stuck at VCC ;
-; inp0[0]    ; Input ; Info     ; Stuck at GND ;
-; inp1[2..0] ; Input ; Info     ; Stuck at GND ;
-; inp1[4]    ; Input ; Info     ; Stuck at GND ;
-; inp1[3]    ; Input ; Info     ; Stuck at VCC ;
-+------------+-------+----------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |priority_encoder|Z        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-------------------------------+
@@ -302,39 +224,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Wed Oct 24 22:33:30 2018
+    Info: Processing started: Thu Oct 25 20:42:41 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Multicycle-IITB-RISC -c Multicycle-IITB-RISC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file priority_encoder.vhd
+    Info (12022): Found design unit 1: priority_encoder-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 14
+    Info (12023): Found entity 1: priority_encoder File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file mux_state.vhd
     Info (12022): Found design unit 1: mux_state-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux_state.vhd Line: 11
     Info (12023): Found entity 1: mux_state File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux_state.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file control_path.vhd
     Info (12022): Found design unit 1: control_path-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 15
     Info (12023): Found entity 1: control_path File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 6
-Info (12127): Elaborating entity "control_path" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at control_path.vhd(59): signal "C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 59
-Warning (10492): VHDL Process Statement warning at control_path.vhd(59): signal "Z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 59
-Info (12128): Elaborating entity "mux_state" for hierarchy "mux_state:d2" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 32
-Warning (21074): Design contains 10 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "opcode[13]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 8
-    Warning (15610): No output dependent on input pin "opcode[12]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 8
-    Warning (15610): No output dependent on input pin "opcode[11]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 8
-    Warning (15610): No output dependent on input pin "opcode[10]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 8
-    Warning (15610): No output dependent on input pin "opcode[9]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 8
-    Warning (15610): No output dependent on input pin "opcode[8]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 8
-    Warning (15610): No output dependent on input pin "opcode[7]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 8
-    Warning (15610): No output dependent on input pin "opcode[6]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 8
-    Warning (15610): No output dependent on input pin "opcode[5]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 8
-    Warning (15610): No output dependent on input pin "opcode[4]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 8
-Info (21057): Implemented 138 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 26 input pins
-    Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 79 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 944 megabytes
-    Info: Processing ended: Wed Oct 24 22:33:45 2018
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:34
+Info (12127): Elaborating entity "priority_encoder" for the top level hierarchy
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "Z[2]" and its non-tri-state driver. File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
+    Warning (13035): Inserted always-enabled tri-state buffer between "Z[1]" and its non-tri-state driver. File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
+    Warning (13035): Inserted always-enabled tri-state buffer between "Z[0]" and its non-tri-state driver. File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
+Info (13060): One or more bidirectional pins are fed by always enabled tri-state buffers
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "Z[2]" is moved to its source File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "Z[1]" is moved to its source File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "Z[0]" is moved to its source File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "Z[2]~synth" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
+    Warning (13010): Node "Z[1]~synth" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
+    Warning (13010): Node "Z[0]~synth" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
+Info (21057): Implemented 42 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21060): Implemented 3 bidirectional pins
+    Info (21061): Implemented 27 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 939 megabytes
+    Info: Processing ended: Thu Oct 25 20:42:54 2018
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:28
 
 

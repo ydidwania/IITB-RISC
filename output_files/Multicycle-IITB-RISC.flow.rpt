@@ -1,5 +1,5 @@
 Flow report for Multicycle-IITB-RISC
-Wed Oct 24 22:33:52 2018
+Thu Oct 25 20:42:59 2018
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ agreement for further details.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Wed Oct 24 22:33:52 2018       ;
+; Flow Status           ; Successful - Thu Oct 25 20:42:59 2018       ;
 ; Quartus Prime Version ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name         ; Multicycle-IITB-RISC                        ;
-; Top-level Entity Name ; control_path                                ;
+; Top-level Entity Name ; priority_encoder                            ;
 ; Family                ; MAX V                                       ;
 ; Device                ; 5M1270ZT144C5                               ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 79 / 1,270 ( 6 % )                          ;
-; Total pins            ; 59 / 114 ( 52 % )                           ;
+; Total logic elements  ; 27 / 1,270 ( 2 % )                          ;
+; Total pins            ; 15 / 114 ( 13 % )                           ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
 +-----------------------+---------------------------------------------+
@@ -60,7 +60,7 @@ agreement for further details.
 +-------------------+----------------------+
 ; Option            ; Setting              ;
 +-------------------+----------------------+
-; Start date & time ; 10/24/2018 22:33:30  ;
+; Start date & time ; 10/25/2018 20:42:42  ;
 ; Main task         ; Compilation          ;
 ; Revision Name     ; Multicycle-IITB-RISC ;
 +-------------------+----------------------+
@@ -71,7 +71,7 @@ agreement for further details.
 +-------------------------------+--------------------------------+----------------------+-------------+----------------+
 ; Assignment Name               ; Value                          ; Default Value        ; Entity Name ; Section Id     ;
 +-------------------------------+--------------------------------+----------------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID         ; 66610803205901.154040061027089 ; --                   ; --          ; --             ;
+; COMPILER_SIGNATURE_ID         ; 66610803205901.154048036212416 ; --                   ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT        ; Verilog Hdl                    ; --                   ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL           ; ModelSim-Altera (Verilog)      ; <None>               ; --          ; --             ;
 ; EDA_TIME_SCALE                ; 1 ps                           ; --                   ; --          ; eda_simulation ;
@@ -79,7 +79,7 @@ agreement for further details.
 ; MIN_CORE_JUNCTION_TEMP        ; 0                              ; --                   ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION ; No Heat Sink With Still Air    ; --                   ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY      ; output_files                   ; --                   ; --          ; --             ;
-; TOP_LEVEL_ENTITY              ; control_path                   ; Multicycle-IITB-RISC ; --          ; --             ;
+; TOP_LEVEL_ENTITY              ; priority_encoder               ; Multicycle-IITB-RISC ; --          ; --             ;
 +-------------------------------+--------------------------------+----------------------+-------------+----------------+
 
 
@@ -88,12 +88,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:15     ; 1.0                     ; 944 MB              ; 00:00:34                           ;
-; Fitter                    ; 00:00:02     ; 1.0                     ; 1040 MB             ; 00:00:01                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 791 MB              ; 00:00:00                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 723 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 1026 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:20     ; --                      ; --                  ; 00:00:37                           ;
+; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 939 MB              ; 00:00:28                           ;
+; Fitter                    ; 00:00:01     ; 1.0                     ; 1032 MB             ; 00:00:01                           ;
+; Assembler                 ; 00:00:00     ; 1.0                     ; 791 MB              ; 00:00:00                           ;
+; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 723 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 1025 MB             ; 00:00:00                           ;
+; Total                     ; 00:00:15     ; --                      ; --                  ; 00:00:30                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
