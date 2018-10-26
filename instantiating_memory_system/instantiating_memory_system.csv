@@ -1,0 +1,21 @@
+# system info instantiating_memory_system on 2018.10.26.21:17:32
+system_info:
+name,value
+DEVICE,5M1270ZT144C5
+DEVICE_FAMILY,MAX V
+GENERATION_ID,1540568850
+#
+#
+# Files generated for instantiating_memory_system on 2018.10.26.21:17:32
+files:
+filepath,kind,attributes,module,is_top
+simulation/instantiating_memory_system.v,VERILOG,,instantiating_memory_system,true
+simulation/submodules/instantiating_memory_system_system_0.v,VERILOG,,instantiating_memory_system_system_0,false
+simulation/submodules/instantiating_memory_system_system_0_onchip_memory_0.hex,HEX,,instantiating_memory_system_system_0_onchip_memory_0,false
+simulation/submodules/instantiating_memory_system_system_0_onchip_memory_0.v,VERILOG,,instantiating_memory_system_system_0_onchip_memory_0,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+instantiating_memory_system.system_0,instantiating_memory_system_system_0
+instantiating_memory_system.system_0.onchip_memory_0,instantiating_memory_system_system_0_onchip_memory_0

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element system_0
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5M1270ZT144C5" />
+ <parameter name="deviceFamily" value="MAX V" />
+ <parameter name="deviceSpeedGrade" value="5" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName">Multicycle-IITB-RISC.qpf</parameter>
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface
+   name="system_0_onchip_memory_0_clk1"
+   internal="system_0.onchip_memory_0_clk1"
+   type="clock"
+   dir="end" />
+ <interface
+   name="system_0_onchip_memory_0_reset1"
+   internal="system_0.onchip_memory_0_reset1"
+   type="reset"
+   dir="end" />
+ <interface
+   name="system_0_onchip_memory_0_s1"
+   internal="system_0.onchip_memory_0_s1"
+   type="avalon"
+   dir="end" />
+ <module name="system_0" kind="memory_system" version="1.0" enabled="1">
+  <parameter name="AUTO_DEVICE" value="5M1270ZT144C5" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="MAX V" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="5" />
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_ONCHIP_MEMORY_0_CLK1_CLOCK_DOMAIN" value="1" />
+  <parameter name="AUTO_ONCHIP_MEMORY_0_CLK1_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_ONCHIP_MEMORY_0_CLK1_RESET_DOMAIN" value="1" />
+  <parameter name="AUTO_UNIQUE_ID">$${FILENAME}_system_0</parameter>
+  <parameter name="component_data_width" value="16" />
+  <parameter name="component_memory_size" value="131072" />
+ </module>
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

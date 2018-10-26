@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="system_0">
+  <columns>
+   <connections preferredWidth="30" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library/Processors and Peripherals/Hard Processor Systems,Library/University Program,Project,Library,Library/University Program/Clock,Library/Basic Functions,Library/Basic Functions/Simulation; Debug and Verification,Library/Processors and Peripherals,Library/Basic Functions/Simulation; Debug and Verification/Debug and Performance" />
+ <window width="1301" height="744" x="65" y="24" />
+ <generation greybox="0" simulation="VERILOG" path="_PROJECT_NAME_" />
+</preferences>

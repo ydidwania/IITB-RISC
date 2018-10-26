@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="simulation/submodules/instantiating_memory_system_system_0_onchip_memory_0.hex"
+   type="HEX"
+   library="onchip_memory_0" />
+ <file
+   path="simulation/submodules/instantiating_memory_system_system_0_onchip_memory_0.v"
+   type="VERILOG"
+   library="onchip_memory_0" />
+ <file
+   path="simulation/submodules/instantiating_memory_system_system_0.v"
+   type="VERILOG"
+   library="system_0" />
+ <file path="simulation/instantiating_memory_system.v" type="VERILOG" />
+ <topLevel name="instantiating_memory_system" />
+ <deviceFamily name="maxv" />
+ <modelMap
+   controllerPath="instantiating_memory_system.system_0.onchip_memory_0"
+   modelPath="instantiating_memory_system.system_0.onchip_memory_0" />
+</simPackage>

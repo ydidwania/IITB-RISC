@@ -1,5 +1,5 @@
 Flow report for Multicycle-IITB-RISC
-Fri Oct 26 13:49:03 2018
+Sat Oct 27 00:09:13 2018
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ agreement for further details.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Fri Oct 26 13:49:03 2018       ;
+; Flow Status           ; Successful - Sat Oct 27 00:09:13 2018       ;
 ; Quartus Prime Version ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name         ; Multicycle-IITB-RISC                        ;
-; Top-level Entity Name ; datapath                                    ;
+; Top-level Entity Name ; priority_encoder                            ;
 ; Family                ; MAX V                                       ;
 ; Device                ; 5M1270ZT144C5                               ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 125 / 1,270 ( 10 % )                        ;
-; Total pins            ; 51 / 114 ( 45 % )                           ;
+; Total logic elements  ; 27 / 1,270 ( 2 % )                          ;
+; Total pins            ; 15 / 114 ( 13 % )                           ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
 +-----------------------+---------------------------------------------+
@@ -60,27 +60,39 @@ agreement for further details.
 +-------------------+----------------------+
 ; Option            ; Setting              ;
 +-------------------+----------------------+
-; Start date & time ; 10/26/2018 13:48:44  ;
+; Start date & time ; 10/27/2018 00:08:54  ;
 ; Main task         ; Compilation          ;
 ; Revision Name     ; Multicycle-IITB-RISC ;
 +-------------------+----------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                     ;
-+-------------------------------+--------------------------------+----------------------+-------------+----------------+
-; Assignment Name               ; Value                          ; Default Value        ; Entity Name ; Section Id     ;
-+-------------------------------+--------------------------------+----------------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID         ; 66610803205901.154054192401222 ; --                   ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT        ; Verilog Hdl                    ; --                   ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL           ; ModelSim-Altera (Verilog)      ; <None>               ; --          ; --             ;
-; EDA_TIME_SCALE                ; 1 ps                           ; --                   ; --          ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP        ; 85                             ; --                   ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP        ; 0                              ; --                   ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION ; No Heat Sink With Still Air    ; --                   ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY      ; output_files                   ; --                   ; --          ; --             ;
-; TOP_LEVEL_ENTITY              ; datapath                       ; Multicycle-IITB-RISC ; --          ; --             ;
-+-------------------------------+--------------------------------+----------------------+-------------+----------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                                 ;
++-------------------------------+------------------------------------------------------------------------------------------------------------+----------------------+-----------------------------+----------------+
+; Assignment Name               ; Value                                                                                                      ; Default Value        ; Entity Name                 ; Section Id     ;
++-------------------------------+------------------------------------------------------------------------------------------------------------+----------------------+-----------------------------+----------------+
+; COMPILER_SIGNATURE_ID         ; 66610803205901.154057913432339                                                                             ; --                   ; --                          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT        ; Verilog Hdl                                                                                                ; --                   ; --                          ; eda_simulation ;
+; EDA_SIMULATION_TOOL           ; ModelSim-Altera (Verilog)                                                                                  ; <None>               ; --                          ; --             ;
+; EDA_TIME_SCALE                ; 1 ps                                                                                                       ; --                   ; --                          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP        ; 85                                                                                                         ; --                   ; --                          ; --             ;
+; MIN_CORE_JUNCTION_TEMP        ; 0                                                                                                          ; --                   ; --                          ; --             ;
+; MISC_FILE                     ; instantiating_memory_system/synthesis/../instantiating_memory_system.cmp                                   ; --                   ; --                          ; --             ;
+; MISC_FILE                     ; instantiating_memory_system/synthesis/../../instantiating_memory_system.qsys                               ; --                   ; --                          ; --             ;
+; MISC_FILE                     ; instantiating_memory_system/simulation/../../instantiating_memory_system.qsys                              ; --                   ; --                          ; --             ;
+; MISC_FILE                     ; instantiating_memory_system/simulation/instantiating_memory_system.v                                       ; --                   ; --                          ; --             ;
+; MISC_FILE                     ; instantiating_memory_system/simulation/submodules/instantiating_memory_system_system_0.v                   ; --                   ; --                          ; --             ;
+; MISC_FILE                     ; instantiating_memory_system/simulation/submodules/instantiating_memory_system_system_0_onchip_memory_0.hex ; --                   ; --                          ; --             ;
+; MISC_FILE                     ; instantiating_memory_system/simulation/submodules/instantiating_memory_system_system_0_onchip_memory_0.v   ; --                   ; --                          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION ; No Heat Sink With Still Air                                                                                ; --                   ; --                          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY      ; output_files                                                                                               ; --                   ; --                          ; --             ;
+; SLD_FILE                      ; instantiating_memory_system/synthesis/instantiating_memory_system.debuginfo                                ; --                   ; --                          ; --             ;
+; SLD_INFO                      ; QSYS_NAME instantiating_memory_system HAS_SOPCINFO 1 GENERATION_ID 1540568855                              ; --                   ; instantiating_memory_system ; --             ;
+; SOPCINFO_FILE                 ; instantiating_memory_system/synthesis/../../instantiating_memory_system.sopcinfo                           ; --                   ; --                          ; --             ;
+; SPD_FILE                      ; instantiating_memory_system/simulation/../instantiating_memory_system.spd                                  ; --                   ; --                          ; --             ;
+; SYNTHESIS_ONLY_QIP            ; On                                                                                                         ; --                   ; --                          ; --             ;
+; TOP_LEVEL_ENTITY              ; priority_encoder                                                                                           ; Multicycle-IITB-RISC ; --                          ; --             ;
++-------------------------------+------------------------------------------------------------------------------------------------------------+----------------------+-----------------------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -88,12 +100,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 937 MB              ; 00:00:28                           ;
-; Fitter                    ; 00:00:03     ; 1.0                     ; 1044 MB             ; 00:00:04                           ;
-; Assembler                 ; 00:00:00     ; 1.0                     ; 791 MB              ; 00:00:00                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 727 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 1025 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:18     ; --                      ; --                  ; 00:00:33                           ;
+; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 944 MB              ; 00:00:30                           ;
+; Fitter                    ; 00:00:02     ; 1.0                     ; 1044 MB             ; 00:00:01                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 791 MB              ; 00:00:00                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 724 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 1024 MB             ; 00:00:00                           ;
+; Total                     ; 00:00:17     ; --                      ; --                  ; 00:00:32                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

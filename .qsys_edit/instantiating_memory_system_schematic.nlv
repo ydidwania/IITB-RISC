@@ -1,0 +1,14 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst instantiating_memory_system -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst instantiating_memory_system.system_0 -pg 1 -lvl 1 -y 60 -regy -20
+preplace inst instantiating_memory_system.system_0.onchip_memory_0 -pg 1 -lvl 1 -y 50
+preplace netloc EXPORT<net_container>instantiating_memory_system</net_container>(SLAVE)instantiating_memory_system.system_0_onchip_memory_0_clk1,(SLAVE)system_0.onchip_memory_0_clk1) 1 0 1 NJ
+preplace netloc EXPORT<net_container>instantiating_memory_system.system_0</net_container>(SLAVE)system_0.onchip_memory_0_reset1,(SLAVE)onchip_memory_0.reset1) 1 0 1 NJ
+preplace netloc EXPORT<net_container>instantiating_memory_system</net_container>(SLAVE)system_0.onchip_memory_0_reset1,(SLAVE)instantiating_memory_system.system_0_onchip_memory_0_reset1) 1 0 1 NJ
+preplace netloc EXPORT<net_container>instantiating_memory_system.system_0</net_container>(SLAVE)onchip_memory_0.s1,(SLAVE)system_0.onchip_memory_0_s1) 1 0 1 NJ
+preplace netloc EXPORT<net_container>instantiating_memory_system.system_0</net_container>(SLAVE)system_0.onchip_memory_0_clk1,(SLAVE)onchip_memory_0.clk1) 1 0 1 NJ
+preplace netloc EXPORT<net_container>instantiating_memory_system</net_container>(SLAVE)system_0.onchip_memory_0_s1,(SLAVE)instantiating_memory_system.system_0_onchip_memory_0_s1) 1 0 1 NJ
+levelinfo -pg 1 0 210 800
+levelinfo -hier instantiating_memory_system 220 480 790
+levelinfo -hier instantiating_memory_system.system_0 490 550 670

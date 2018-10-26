@@ -1,0 +1,81 @@
+Info: Starting: Create simulation model
+Info: qsys-generate "/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/instantiating_memory_system.qsys" --simulation=VERILOG --allow-mixed-language-simulation --output-directory="/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/instantiating_memory_system/simulation" --family="MAX V" --part=5M1270ZT144C5
+Progress: Loading Project1/instantiating_memory_system.qsys
+Progress: Reading input file
+Progress: Adding system_0 [memory_system 1.0]
+Progress: Reading input file
+Progress: Adding onchip_memory_0 [altera_avalon_onchip_memory2 16.1]
+Progress: Parameterizing module onchip_memory_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Progress: Parameterizing module system_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: instantiating_memory_system.system_0: Value of onchip memory ram data width is 16 
+Info: instantiating_memory_system: Generating instantiating_memory_system "instantiating_memory_system" for SIM_VERILOG
+Info: system_0: "instantiating_memory_system" instantiated memory_system "system_0"
+Info: onchip_memory_0: Starting RTL generation for module 'instantiating_memory_system_system_0_onchip_memory_0'
+Info: onchip_memory_0:   Generation command is [exec /home/jukebox/intelFPGA_lite/16.1/quartus/linux64/perl/bin/perl -I /home/jukebox/intelFPGA_lite/16.1/quartus/linux64/perl/lib -I /home/jukebox/intelFPGA_lite/16.1/quartus/sopc_builder/bin/europa -I /home/jukebox/intelFPGA_lite/16.1/quartus/sopc_builder/bin/perl_lib -I /home/jukebox/intelFPGA_lite/16.1/quartus/sopc_builder/bin -I /home/jukebox/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/jukebox/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/jukebox/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=instantiating_memory_system_system_0_onchip_memory_0 --dir=/tmp/alt7830_9045349832637719983.dir/0001_onchip_memory_0_gen/ --quartus_dir=/home/jukebox/intelFPGA_lite/16.1/quartus --verilog --config=/tmp/alt7830_9045349832637719983.dir/0001_onchip_memory_0_gen//instantiating_memory_system_system_0_onchip_memory_0_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt7830_9045349832637719983.dir/0001_onchip_memory_0_gen/  ]
+Info: onchip_memory_0: Done RTL generation for module 'instantiating_memory_system_system_0_onchip_memory_0'
+Info: onchip_memory_0: "system_0" instantiated altera_avalon_onchip_memory2 "onchip_memory_0"
+Info: instantiating_memory_system: Done "instantiating_memory_system" with 3 modules, 4 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd="/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/instantiating_memory_system/instantiating_memory_system.spd" --output-directory="/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/instantiating_memory_system/simulation/" --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/instantiating_memory_system/instantiating_memory_system.spd --output-directory=/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/instantiating_memory_system/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/instantiating_memory_system/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/instantiating_memory_system/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/instantiating_memory_system/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/instantiating_memory_system/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	2 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/instantiating_memory_system/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/instantiating_memory_system/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate "/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/instantiating_memory_system.qsys" --block-symbol-file --output-directory="/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/instantiating_memory_system" --family="MAX V" --part=5M1270ZT144C5
+Progress: Loading Project1/instantiating_memory_system.qsys
+Progress: Reading input file
+Progress: Adding system_0 [memory_system 1.0]
+Progress: Parameterizing module system_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: instantiating_memory_system.system_0: Value of onchip memory ram data width is 16 
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate "/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/instantiating_memory_system.qsys" --synthesis=VERILOG --output-directory="/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/instantiating_memory_system/synthesis" --family="MAX V" --part=5M1270ZT144C5
+Progress: Loading Project1/instantiating_memory_system.qsys
+Progress: Reading input file
+Progress: Adding system_0 [memory_system 1.0]
+Progress: Parameterizing module system_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: instantiating_memory_system.system_0: Value of onchip memory ram data width is 16 
+Info: instantiating_memory_system: Generating instantiating_memory_system "instantiating_memory_system" for QUARTUS_SYNTH
+Info: system_0: "instantiating_memory_system" instantiated memory_system "system_0"
+Info: onchip_memory_0: Starting RTL generation for module 'instantiating_memory_system_system_0_onchip_memory_0'
+Info: onchip_memory_0:   Generation command is [exec /home/jukebox/intelFPGA_lite/16.1/quartus/linux64/perl/bin/perl -I /home/jukebox/intelFPGA_lite/16.1/quartus/linux64/perl/lib -I /home/jukebox/intelFPGA_lite/16.1/quartus/sopc_builder/bin/europa -I /home/jukebox/intelFPGA_lite/16.1/quartus/sopc_builder/bin/perl_lib -I /home/jukebox/intelFPGA_lite/16.1/quartus/sopc_builder/bin -I /home/jukebox/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/jukebox/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/jukebox/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=instantiating_memory_system_system_0_onchip_memory_0 --dir=/tmp/alt7830_9045349832637719983.dir/0003_onchip_memory_0_gen/ --quartus_dir=/home/jukebox/intelFPGA_lite/16.1/quartus --verilog --config=/tmp/alt7830_9045349832637719983.dir/0003_onchip_memory_0_gen//instantiating_memory_system_system_0_onchip_memory_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory_0: Done RTL generation for module 'instantiating_memory_system_system_0_onchip_memory_0'
+Info: onchip_memory_0: "system_0" instantiated altera_avalon_onchip_memory2 "onchip_memory_0"
+Info: instantiating_memory_system: Done "instantiating_memory_system" with 3 modules, 4 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

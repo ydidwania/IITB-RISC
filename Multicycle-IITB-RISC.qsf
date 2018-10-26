@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX V"
 set_global_assignment -name DEVICE 5M1270ZT144C5
-set_global_assignment -name TOP_LEVEL_ENTITY datapath
+set_global_assignment -name TOP_LEVEL_ENTITY priority_encoder
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 16.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:30:32  OCTOBER 23, 2018"
 set_global_assignment -name LAST_QUARTUS_VERSION "16.1.0 Lite Edition"
@@ -54,6 +54,8 @@ set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
+set_global_assignment -name QIP_FILE instantiating_memory_system/synthesis/instantiating_memory_system.qip
+set_global_assignment -name SIP_FILE instantiating_memory_system/simulation/instantiating_memory_system.sip
 set_global_assignment -name VHDL_FILE z9.vhd
 set_global_assignment -name VHDL_FILE datapath.vhd
 set_global_assignment -name VHDL_FILE mux2to1.vhd
@@ -67,3 +69,4 @@ set_global_assignment -name VHDL_FILE reg_16bit.vhd
 set_global_assignment -name VHDL_FILE priority_encoder.vhd
 set_global_assignment -name VHDL_FILE mux_state.vhd
 set_global_assignment -name VHDL_FILE control_path.vhd
+set_global_assignment -name MIF_FILE "Multicycle-IITB-RISC.mif"

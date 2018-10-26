@@ -1,0 +1,12 @@
+
+WORK > DEFAULT
+DEFAULT:          ./libraries/work/            
+work:             ./libraries/work/            
+onchip_memory_0:  ./libraries/onchip_memory_0/ 
+system_0:         ./libraries/system_0/        
+altera_ver:       ./libraries/altera_ver/      
+lpm_ver:          ./libraries/lpm_ver/         
+sgate_ver:        ./libraries/sgate_ver/       
+altera_mf_ver:    ./libraries/altera_mf_ver/   
+altera_lnsim_ver: ./libraries/altera_lnsim_ver/
+maxv_ver:         ./libraries/maxv_ver/        
