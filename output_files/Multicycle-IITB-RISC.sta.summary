@@ -2,7 +2,27 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Setup 'ctrl_word[8]'
+Slack : -15.120
+TNS   : -26.524
+
+Type  : Setup 'clk'
+Slack : -13.657
+TNS   : -379.594
+
+Type  : Hold 'ctrl_word[8]'
+Slack : 1.356
+TNS   : 0.000
+
+Type  : Hold 'clk'
+Slack : 1.699
+TNS   : 0.000
+
 Type  : Minimum Pulse Width 'clk'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'ctrl_word[8]'
 Slack : -2.289
 TNS   : -2.289
 

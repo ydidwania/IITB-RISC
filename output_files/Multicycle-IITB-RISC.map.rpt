@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Multicycle-IITB-RISC
-Fri Oct 26 00:22:31 2018
+Fri Oct 26 13:48:56 2018
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -13,9 +13,18 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |datapath
+ 13. Port Connectivity Checks: "mux6to1:B_mux"
+ 14. Port Connectivity Checks: "mux4to1:T2_mux"
+ 15. Port Connectivity Checks: "mux4to1:D3_mux"
+ 16. Port Connectivity Checks: "mux2to1:mux_c"
+ 17. Port Connectivity Checks: "mux4to1:mux_b"
+ 18. Port Connectivity Checks: "reg_16bit:IntsR"
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -42,13 +51,13 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Oct 26 00:22:31 2018       ;
+; Analysis & Synthesis Status ; Successful - Fri Oct 26 13:48:56 2018       ;
 ; Quartus Prime Version       ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name               ; Multicycle-IITB-RISC                        ;
-; Top-level Entity Name       ; reg_file                                    ;
+; Top-level Entity Name       ; datapath                                    ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 296                                         ;
-; Total pins                  ; 75                                          ;
+; Total logic elements        ; 141                                         ;
+; Total pins                  ; 51                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -60,7 +69,7 @@ agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value        ;
 +----------------------------------------------------------------------------+--------------------+----------------------+
 ; Device                                                                     ; 5M1270ZT144C5      ;                      ;
-; Top-level entity name                                                      ; reg_file           ; Multicycle-IITB-RISC ;
+; Top-level entity name                                                      ; datapath           ; Multicycle-IITB-RISC ;
 ; Family name                                                                ; MAX V              ; Cyclone V            ;
 ; Use smart compilation                                                      ; Off                ; Off                  ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                   ;
@@ -146,7 +155,14 @@ agreement for further details.
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                    ; Library ;
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
-; reg_file.vhd                     ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd  ;         ;
+; z9.vhd                           ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/z9.vhd        ;         ;
+; datapath.vhd                     ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd  ;         ;
+; mux2to1.vhd                      ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux2to1.vhd   ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd       ;         ;
+; mux6to1.vhd                      ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd   ;         ;
+; mux4to1.vhd                      ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux4to1.vhd   ;         ;
+; se9.vhd                          ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/se9.vhd       ;         ;
+; se6.vhd                          ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/se6.vhd       ;         ;
 ; reg_16bit.vhd                    ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_16bit.vhd ;         ;
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
 
@@ -156,51 +172,72 @@ agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 296   ;
-;     -- Combinational with no register       ; 168   ;
-;     -- Register only                        ; 128   ;
-;     -- Combinational with a register        ; 0     ;
+; Total logic elements                        ; 141   ;
+;     -- Combinational with no register       ; 109   ;
+;     -- Register only                        ; 16    ;
+;     -- Combinational with a register        ; 16    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 136   ;
-;     -- 3 input functions                    ; 32    ;
-;     -- 2 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 69    ;
+;     -- 3 input functions                    ; 34    ;
+;     -- 2 input functions                    ; 22    ;
 ;     -- 1 input functions                    ; 0     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 296   ;
-;     -- arithmetic mode                      ; 0     ;
+;     -- normal mode                          ; 111   ;
+;     -- arithmetic mode                      ; 30    ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
 ;     -- synchronous clear/load mode          ; 0     ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 128   ;
-; I/O pins                                    ; 75    ;
+; Total registers                             ; 32    ;
+; Total logic cells in carry chains           ; 32    ;
+; I/O pins                                    ; 51    ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 128   ;
-; Total fan-out                               ; 1072  ;
-; Average fan-out                             ; 2.89  ;
+; Maximum fan-out                             ; 32    ;
+; Total fan-out                               ; 505   ;
+; Average fan-out                             ; 2.63  ;
 +---------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                     ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name      ; Entity Name ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------+-------------+--------------+
-; |reg_file                  ; 296 (168)   ; 128          ; 0          ; 75   ; 0            ; 168 (168)    ; 128 (0)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file                ; reg_file    ; work         ;
-;    |reg_16bit:r0|          ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|reg_16bit:r0   ; reg_16bit   ; work         ;
-;    |reg_16bit:r1|          ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|reg_16bit:r1   ; reg_16bit   ; work         ;
-;    |reg_16bit:r2|          ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|reg_16bit:r2   ; reg_16bit   ; work         ;
-;    |reg_16bit:r3|          ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|reg_16bit:r3   ; reg_16bit   ; work         ;
-;    |reg_16bit:r4|          ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|reg_16bit:r4   ; reg_16bit   ; work         ;
-;    |reg_16bit:r5|          ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|reg_16bit:r5   ; reg_16bit   ; work         ;
-;    |reg_16bit:r6|          ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|reg_16bit:r6   ; reg_16bit   ; work         ;
-;    |reg_16bit:reg7|        ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|reg_16bit:reg7 ; reg_16bit   ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------+-------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                      ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name       ; Entity Name ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------+-------------+--------------+
+; |datapath                  ; 141 (0)     ; 32           ; 0          ; 51   ; 0            ; 109 (0)      ; 16 (0)            ; 16 (0)           ; 32 (0)          ; 0 (0)      ; |datapath                 ; datapath    ; work         ;
+;    |alu:AritLU|            ; 75 (75)     ; 0            ; 0          ; 0    ; 0            ; 75 (75)      ; 0 (0)             ; 0 (0)            ; 32 (32)         ; 0 (0)      ; |datapath|alu:AritLU      ; alu         ; work         ;
+;    |mux4to1:A_mux|         ; 16 (16)     ; 0            ; 0          ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |datapath|mux4to1:A_mux   ; mux4to1     ; work         ;
+;    |mux6to1:B_mux|         ; 18 (18)     ; 0            ; 0          ; 0    ; 0            ; 18 (18)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |datapath|mux6to1:B_mux   ; mux6to1     ; work         ;
+;    |reg_16bit:Temp1|       ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |datapath|reg_16bit:Temp1 ; reg_16bit   ; work         ;
+;    |reg_16bit:Temp2|       ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; 0 (0)           ; 0 (0)      ; |datapath|reg_16bit:Temp2 ; reg_16bit   ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++----------------------------------------------------+----------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal  ; Free of Timing Hazards ;
++----------------------------------------------------+----------------------+------------------------+
+; alu:AritLU|carry                                   ; alu:AritLU|Equal1    ; yes                    ;
+; alu:AritLU|zero                                    ; alu:AritLU|process_0 ; yes                    ;
+; Number of user-specified and inferred latches = 2  ;                      ;                        ;
++----------------------------------------------------+----------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; reg_16bit:IntsR|q[7..15]               ; Stuck at GND due to stuck port data_in ;
+; reg_16bit:ProgC|q[0..15]               ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 25 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -208,24 +245,94 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 128   ;
+; Total registers                              ; 32    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 128   ;
+; Number of registers using Clock Enable       ; 32    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |reg_file|Mux14            ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |reg_file|Mux17            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; 1:1                ; 16 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; Yes        ; |datapath|reg_16bit:Temp1|q[2] ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |datapath|alu:AritLU|Mux3      ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; No         ; |datapath|mux6to1:B_mux|Mux15  ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |datapath|mux4to1:A_mux|Mux15  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |datapath ;
++----------------+------------------+--------------------------------------+
+; Parameter Name ; Value            ; Type                                 ;
++----------------+------------------+--------------------------------------+
+; zero16         ; 0000000000000000 ; Unsigned Binary                      ;
+; one16          ; 0000000000000001 ; Unsigned Binary                      ;
++----------------+------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "mux6to1:B_mux"     ;
++-------------+-------+----------+--------------+
+; Port        ; Type  ; Severity ; Details      ;
++-------------+-------+----------+--------------+
+; in_5        ; Input ; Info     ; Stuck at GND ;
+; in_6[0..14] ; Input ; Info     ; Stuck at GND ;
+; in_6[15]    ; Input ; Info     ; Stuck at VCC ;
++-------------+-------+----------+--------------+
+
+
++--------------------------------------------+
+; Port Connectivity Checks: "mux4to1:T2_mux" ;
++------+-------+----------+------------------+
+; Port ; Type  ; Severity ; Details          ;
++------+-------+----------+------------------+
+; in_4 ; Input ; Info     ; Stuck at GND     ;
++------+-------+----------+------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4to1:D3_mux"                                                                        ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; mux_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux2to1:mux_c"                                                                         ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; mux_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4to1:mux_b"                                                                         ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; in_4    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; mux_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_16bit:IntsR"                                                                       ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; q[0..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -234,10 +341,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Fri Oct 26 00:22:17 2018
+    Info: Processing started: Fri Oct 26 13:48:43 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Multicycle-IITB-RISC -c Multicycle-IITB-RISC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file z9.vhd
+    Info (12022): Found design unit 1: z9-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/z9.vhd Line: 11
+    Info (12023): Found entity 1: z9 File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/z9.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
+    Info (12022): Found design unit 1: datapath-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 17
+    Info (12023): Found entity 1: datapath File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux2to1.vhd
+    Info (12022): Found design unit 1: mux2to1-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux2to1.vhd Line: 10
+    Info (12023): Found entity 1: mux2to1 File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux2to1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ALU.vhd
+    Info (12022): Found design unit 1: alu-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 13
+    Info (12023): Found entity 1: alu File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mux6to1.vhd
+    Info (12022): Found design unit 1: mux6to1-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 10
+    Info (12023): Found entity 1: mux6to1 File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux4to1.vhd
+    Info (12022): Found design unit 1: mux4to1-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux4to1.vhd Line: 10
+    Info (12023): Found entity 1: mux4to1 File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux4to1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file se9.vhd
+    Info (12022): Found design unit 1: se9-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/se9.vhd Line: 11
+    Info (12023): Found entity 1: se9 File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/se9.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file se6.vhd
+    Info (12022): Found design unit 1: se6-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/se6.vhd Line: 11
+    Info (12023): Found entity 1: se6 File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/se6.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file reg_file.vhd
     Info (12022): Found design unit 1: reg_file-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd Line: 15
     Info (12023): Found entity 1: reg_file File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd Line: 7
@@ -253,20 +384,101 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux_sta
 Info (12021): Found 2 design units, including 1 entities, in source file control_path.vhd
     Info (12022): Found design unit 1: control_path-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 15
     Info (12023): Found entity 1: control_path File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 6
-Info (12127): Elaborating entity "reg_file" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at reg_file.vhd(46): signal "registers_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd Line: 46
-Warning (10492): VHDL Process Statement warning at reg_file.vhd(49): signal "registers_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd Line: 49
-Warning (10492): VHDL Process Statement warning at reg_file.vhd(53): signal "wr_en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd Line: 53
-Info (12128): Elaborating entity "reg_16bit" for hierarchy "reg_16bit:r0" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd Line: 30
+Info (12127): Elaborating entity "datapath" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(12): used implicit default value for signal "f0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 12
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(12): used implicit default value for signal "f1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 12
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(13): used implicit default value for signal "instr" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 13
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(21): object "Mem_RD" assigned a value but never read File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 21
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(21): object "Mem_WR" assigned a value but never read File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 21
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(21): object "PE_RST" assigned a value but never read File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 21
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(21): object "RF_WR" assigned a value but never read File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 21
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(21): object "a" assigned a value but never read File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 21
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(21): object "d" assigned a value but never read File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 21
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(23): object "e" assigned a value but never read File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 23
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(28): used implicit default value for signal "PC_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 28
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(28): used implicit default value for signal "IR_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 28
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(28): object "D3" assigned a value but never read File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 28
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(29): used implicit default value for signal "D1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 29
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(29): used implicit default value for signal "D2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 29
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(29): used implicit default value for signal "R7" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 29
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(30): object "Mem_A" assigned a value but never read File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 30
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(30): object "Mem_B" assigned a value but never read File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 30
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(30): used implicit default value for signal "Mem_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 30
+Info (12128): Elaborating entity "reg_16bit" for hierarchy "reg_16bit:ProgC" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 106
 Warning (10492): VHDL Process Statement warning at reg_16bit.vhd(15): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_16bit.vhd Line: 15
-Info (21057): Implemented 371 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 27 input pins
-    Info (21059): Implemented 48 output pins
-    Info (21061): Implemented 296 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 934 megabytes
-    Info: Processing ended: Fri Oct 26 00:22:31 2018
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:32
+Info (12128): Elaborating entity "alu" for hierarchy "alu:AritLU" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 110
+Warning (10631): VHDL Process Statement warning at ALU.vhd(15): inferring latch(es) for signal or variable "carry", which holds its previous value in one or more paths through the process File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 15
+Warning (10631): VHDL Process Statement warning at ALU.vhd(15): inferring latch(es) for signal or variable "zero", which holds its previous value in one or more paths through the process File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 15
+Info (10041): Inferred latch for "zero" at ALU.vhd(15) File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 15
+Info (10041): Inferred latch for "carry" at ALU.vhd(15) File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 15
+Info (12128): Elaborating entity "z9" for hierarchy "z9:Zero7" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 113
+Info (12128): Elaborating entity "se6" for hierarchy "se6:SignE6" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 114
+Info (12128): Elaborating entity "se9" for hierarchy "se9:SignE9" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 115
+Info (12128): Elaborating entity "mux4to1" for hierarchy "mux4to1:mux_b" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 120
+Warning (10492): VHDL Process Statement warning at mux4to1.vhd(16): signal "in_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux4to1.vhd Line: 16
+Warning (10492): VHDL Process Statement warning at mux4to1.vhd(18): signal "in_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux4to1.vhd Line: 18
+Warning (10492): VHDL Process Statement warning at mux4to1.vhd(20): signal "in_3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux4to1.vhd Line: 20
+Warning (10492): VHDL Process Statement warning at mux4to1.vhd(22): signal "in_4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux4to1.vhd Line: 22
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:mux_c" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 122
+Warning (10492): VHDL Process Statement warning at mux2to1.vhd(16): signal "in_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux2to1.vhd Line: 16
+Warning (10492): VHDL Process Statement warning at mux2to1.vhd(18): signal "in_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux2to1.vhd Line: 18
+Info (12128): Elaborating entity "mux6to1" for hierarchy "mux6to1:B_mux" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 131
+Warning (10492): VHDL Process Statement warning at mux6to1.vhd(16): signal "in_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 16
+Warning (10492): VHDL Process Statement warning at mux6to1.vhd(18): signal "in_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 18
+Warning (10492): VHDL Process Statement warning at mux6to1.vhd(20): signal "in_3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 20
+Warning (10492): VHDL Process Statement warning at mux6to1.vhd(22): signal "in_4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 22
+Warning (10492): VHDL Process Statement warning at mux6to1.vhd(24): signal "in_5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 24
+Warning (10492): VHDL Process Statement warning at mux6to1.vhd(26): signal "in_6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 26
+Warning (10492): VHDL Process Statement warning at mux6to1.vhd(28): signal "in_6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 28
+Warning (13012): Latch alu:AritLU|zero has unsafe behavior File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrl_word[8] File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 10
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "f0" is stuck at GND File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 12
+    Warning (13410): Pin "f1" is stuck at GND File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 12
+    Warning (13410): Pin "instr[15]" is stuck at GND File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 13
+    Warning (13410): Pin "instr[14]" is stuck at GND File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 13
+    Warning (13410): Pin "instr[13]" is stuck at GND File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 13
+    Warning (13410): Pin "instr[12]" is stuck at GND File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 13
+    Warning (13410): Pin "instr[11]" is stuck at GND File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 13
+    Warning (13410): Pin "instr[10]" is stuck at GND File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 13
+    Warning (13410): Pin "instr[9]" is stuck at GND File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 13
+    Warning (13410): Pin "instr[8]" is stuck at GND File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 13
+    Warning (13410): Pin "instr[7]" is stuck at GND File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 13
+    Warning (13410): Pin "instr[6]" is stuck at GND File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 13
+    Warning (13410): Pin "instr[5]" is stuck at GND File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 13
+    Warning (13410): Pin "instr[4]" is stuck at GND File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 13
+    Warning (13410): Pin "instr[3]" is stuck at GND File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 13
+    Warning (13410): Pin "instr[2]" is stuck at GND File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 13
+    Warning (13410): Pin "instr[1]" is stuck at GND File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 13
+    Warning (13410): Pin "instr[0]" is stuck at GND File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 13
+Warning (21074): Design contains 19 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ctrl_word[19]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_word[18]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_word[17]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_word[16]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_word[15]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_word[14]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_word[13]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_word[12]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_word[11]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_word[10]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_word[5]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_word[4]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_word[3]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_word[2]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_word[1]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_word[0]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_word[28]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_word[20]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_word[21]" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 10
+Info (21057): Implemented 192 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 30 input pins
+    Info (21059): Implemented 21 output pins
+    Info (21061): Implemented 141 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 77 warnings
+    Info: Peak virtual memory: 937 megabytes
+    Info: Processing ended: Fri Oct 26 13:48:56 2018
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:29
 
 
