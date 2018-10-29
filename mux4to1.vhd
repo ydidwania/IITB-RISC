@@ -9,7 +9,7 @@ end entity;
 
 architecture behave of mux4to1 is
 begin
-	process(sel)
+	process(sel, in_1, in_2, in_3, in_4)
 	begin
 		case sel is
 		when "00" =>

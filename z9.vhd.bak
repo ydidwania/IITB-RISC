@@ -12,7 +12,6 @@ architecture behave of z9 is
 begin
 	process(z9_in)
 	begin
---		z9_out <= (others=>'0');
 		z9_out <= z9_in & "0000000";
 	end process;
 end behave;

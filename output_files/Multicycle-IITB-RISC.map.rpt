@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Multicycle-IITB-RISC
-Mon Oct 29 15:07:51 2018
+Tue Oct 30 00:33:19 2018
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -15,17 +15,30 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Parameter Settings for User Entity Instance: datapath:dat_path
- 10. Port Connectivity Checks: "datapath:dat_path|mux6to1:B_mux"
- 11. Port Connectivity Checks: "datapath:dat_path|mux4to1:T2_mux"
- 12. Port Connectivity Checks: "datapath:dat_path|mux3bit6to1:mux_e"
- 13. Port Connectivity Checks: "datapath:dat_path|mux4to1:mux_b"
- 14. Port Connectivity Checks: "control_path:ctrl_path|mux_state:d7"
- 15. Port Connectivity Checks: "control_path:ctrl_path|mux_state:d6"
- 16. Port Connectivity Checks: "control_path:ctrl_path|mux_state:d5"
- 17. Port Connectivity Checks: "control_path:ctrl_path|mux_state:d4"
- 18. Port Connectivity Checks: "control_path:ctrl_path|mux_state:d3"
- 19. Port Connectivity Checks: "control_path:ctrl_path|mux_state:d2"
- 20. Analysis & Synthesis Messages
+ 10. Parameter Settings for User Entity Instance: datapath:dat_path|reg_16bit:ProgC
+ 11. Parameter Settings for User Entity Instance: datapath:dat_path|reg_16bit:IntsR
+ 12. Parameter Settings for User Entity Instance: datapath:dat_path|reg_16bit:Temp1
+ 13. Parameter Settings for User Entity Instance: datapath:dat_path|reg_16bit:Temp2
+ 14. Parameter Settings for User Entity Instance: datapath:dat_path|alu:AritLU
+ 15. Parameter Settings for User Entity Instance: datapath:dat_path|reg_file:RF|reg_16bit:r0
+ 16. Parameter Settings for User Entity Instance: datapath:dat_path|reg_file:RF|reg_16bit:r1
+ 17. Parameter Settings for User Entity Instance: datapath:dat_path|reg_file:RF|reg_16bit:r2
+ 18. Parameter Settings for User Entity Instance: datapath:dat_path|reg_file:RF|reg_16bit:r3
+ 19. Parameter Settings for User Entity Instance: datapath:dat_path|reg_file:RF|reg_16bit:r4
+ 20. Parameter Settings for User Entity Instance: datapath:dat_path|reg_file:RF|reg_16bit:r5
+ 21. Parameter Settings for User Entity Instance: datapath:dat_path|reg_file:RF|reg_16bit:r6
+ 22. Parameter Settings for User Entity Instance: datapath:dat_path|reg_file:RF|reg_16bit:reg7
+ 23. Port Connectivity Checks: "datapath:dat_path|mux6to1:B_mux"
+ 24. Port Connectivity Checks: "datapath:dat_path|mux4to1:T2_mux"
+ 25. Port Connectivity Checks: "datapath:dat_path|mux3bit6to1:mux_e"
+ 26. Port Connectivity Checks: "datapath:dat_path|mux4to1:mux_b"
+ 27. Port Connectivity Checks: "control_path:ctrl_path|mux_state:d7"
+ 28. Port Connectivity Checks: "control_path:ctrl_path|mux_state:d6"
+ 29. Port Connectivity Checks: "control_path:ctrl_path|mux_state:d5"
+ 30. Port Connectivity Checks: "control_path:ctrl_path|mux_state:d4"
+ 31. Port Connectivity Checks: "control_path:ctrl_path|mux_state:d3"
+ 32. Port Connectivity Checks: "control_path:ctrl_path|mux_state:d2"
+ 33. Analysis & Synthesis Messages
 
 
 
@@ -52,7 +65,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Oct 29 15:07:51 2018       ;
+; Analysis & Synthesis Status ; Successful - Tue Oct 30 00:33:19 2018       ;
 ; Quartus Prime Version       ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name               ; Multicycle-IITB-RISC                        ;
 ; Top-level Entity Name       ; main                                        ;
@@ -242,6 +255,149 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dat_path|reg_16bit:ProgC ;
++----------------+------------------+--------------------------------------------+
+; Parameter Name ; Value            ; Type                                       ;
++----------------+------------------+--------------------------------------------+
+; zero16         ; 0000000000000000 ; Unsigned Binary                            ;
+; one16          ; 0000000000000001 ; Unsigned Binary                            ;
++----------------+------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dat_path|reg_16bit:IntsR ;
++----------------+------------------+--------------------------------------------+
+; Parameter Name ; Value            ; Type                                       ;
++----------------+------------------+--------------------------------------------+
+; zero16         ; 0000000000000000 ; Unsigned Binary                            ;
+; one16          ; 0000000000000001 ; Unsigned Binary                            ;
++----------------+------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dat_path|reg_16bit:Temp1 ;
++----------------+------------------+--------------------------------------------+
+; Parameter Name ; Value            ; Type                                       ;
++----------------+------------------+--------------------------------------------+
+; zero16         ; 0000000000000000 ; Unsigned Binary                            ;
+; one16          ; 0000000000000001 ; Unsigned Binary                            ;
++----------------+------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dat_path|reg_16bit:Temp2 ;
++----------------+------------------+--------------------------------------------+
+; Parameter Name ; Value            ; Type                                       ;
++----------------+------------------+--------------------------------------------+
+; zero16         ; 0000000000000000 ; Unsigned Binary                            ;
+; one16          ; 0000000000000001 ; Unsigned Binary                            ;
++----------------+------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dat_path|alu:AritLU ;
++----------------+------------------+---------------------------------------+
+; Parameter Name ; Value            ; Type                                  ;
++----------------+------------------+---------------------------------------+
+; zero16         ; 0000000000000000 ; Unsigned Binary                       ;
+; one16          ; 0000000000000001 ; Unsigned Binary                       ;
++----------------+------------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dat_path|reg_file:RF|reg_16bit:r0 ;
++----------------+------------------+-----------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                ;
++----------------+------------------+-----------------------------------------------------+
+; zero16         ; 0000000000000000 ; Unsigned Binary                                     ;
+; one16          ; 0000000000000001 ; Unsigned Binary                                     ;
++----------------+------------------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dat_path|reg_file:RF|reg_16bit:r1 ;
++----------------+------------------+-----------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                ;
++----------------+------------------+-----------------------------------------------------+
+; zero16         ; 0000000000000000 ; Unsigned Binary                                     ;
+; one16          ; 0000000000000001 ; Unsigned Binary                                     ;
++----------------+------------------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dat_path|reg_file:RF|reg_16bit:r2 ;
++----------------+------------------+-----------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                ;
++----------------+------------------+-----------------------------------------------------+
+; zero16         ; 0000000000000000 ; Unsigned Binary                                     ;
+; one16          ; 0000000000000001 ; Unsigned Binary                                     ;
++----------------+------------------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dat_path|reg_file:RF|reg_16bit:r3 ;
++----------------+------------------+-----------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                ;
++----------------+------------------+-----------------------------------------------------+
+; zero16         ; 0000000000000000 ; Unsigned Binary                                     ;
+; one16          ; 0000000000000001 ; Unsigned Binary                                     ;
++----------------+------------------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dat_path|reg_file:RF|reg_16bit:r4 ;
++----------------+------------------+-----------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                ;
++----------------+------------------+-----------------------------------------------------+
+; zero16         ; 0000000000000000 ; Unsigned Binary                                     ;
+; one16          ; 0000000000000001 ; Unsigned Binary                                     ;
++----------------+------------------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dat_path|reg_file:RF|reg_16bit:r5 ;
++----------------+------------------+-----------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                ;
++----------------+------------------+-----------------------------------------------------+
+; zero16         ; 0000000000000000 ; Unsigned Binary                                     ;
+; one16          ; 0000000000000001 ; Unsigned Binary                                     ;
++----------------+------------------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dat_path|reg_file:RF|reg_16bit:r6 ;
++----------------+------------------+-----------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                ;
++----------------+------------------+-----------------------------------------------------+
+; zero16         ; 0000000000000000 ; Unsigned Binary                                     ;
+; one16          ; 0000000000000001 ; Unsigned Binary                                     ;
++----------------+------------------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dat_path|reg_file:RF|reg_16bit:reg7 ;
++----------------+------------------+-------------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                  ;
++----------------+------------------+-------------------------------------------------------+
+; zero16         ; 0000000000000000 ; Unsigned Binary                                       ;
+; one16          ; 0000000000000001 ; Unsigned Binary                                       ;
++----------------+------------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------------------------------------+
 ; Port Connectivity Checks: "datapath:dat_path|mux6to1:B_mux" ;
 +-------------+-------+----------+----------------------------+
@@ -368,7 +524,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Mon Oct 29 15:07:15 2018
+    Info: Processing started: Tue Oct 30 00:33:06 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Multicycle-IITB-RISC -c Multicycle-IITB-RISC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -394,7 +550,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux2to1
     Info (12022): Found design unit 1: mux2to1-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux2to1.vhd Line: 10
     Info (12023): Found entity 1: mux2to1 File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux2to1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ALU.vhd
-    Info (12022): Found design unit 1: alu-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 13
+    Info (12022): Found design unit 1: alu-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 18
     Info (12023): Found entity 1: alu File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux6to1.vhd
     Info (12022): Found design unit 1: mux6to1-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 10
@@ -412,7 +568,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file reg_fil
     Info (12022): Found design unit 1: reg_file-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd Line: 15
     Info (12023): Found entity 1: reg_file File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file reg_16bit.vhd
-    Info (12022): Found design unit 1: reg_16bit-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_16bit.vhd Line: 11
+    Info (12022): Found design unit 1: reg_16bit-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_16bit.vhd Line: 15
     Info (12023): Found entity 1: reg_16bit File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_16bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file priority_encoder.vhd
     Info (12022): Found design unit 1: priority_encoder-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 14
@@ -425,63 +581,37 @@ Info (12021): Found 2 design units, including 1 entities, in source file control
     Info (12023): Found entity 1: control_path File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 6
 Info (12127): Elaborating entity "main" for the top level hierarchy
 Info (12128): Elaborating entity "control_path" for hierarchy "control_path:ctrl_path" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/main.vhd Line: 35
-Warning (10492): VHDL Process Statement warning at control_path.vhd(58): signal "C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 58
-Warning (10492): VHDL Process Statement warning at control_path.vhd(58): signal "Z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 58
 Info (12128): Elaborating entity "mux_state" for hierarchy "control_path:ctrl_path|mux_state:d2" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 31
 Info (12128): Elaborating entity "datapath" for hierarchy "datapath:dat_path" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/main.vhd Line: 37
-Info (12128): Elaborating entity "reg_16bit" for hierarchy "datapath:dat_path|reg_16bit:ProgC" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 157
-Warning (10492): VHDL Process Statement warning at reg_16bit.vhd(15): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_16bit.vhd Line: 15
-Info (12128): Elaborating entity "alu" for hierarchy "datapath:dat_path|alu:AritLU" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 161
-Warning (10631): VHDL Process Statement warning at ALU.vhd(15): inferring latch(es) for signal or variable "carry", which holds its previous value in one or more paths through the process File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 15
-Warning (10631): VHDL Process Statement warning at ALU.vhd(15): inferring latch(es) for signal or variable "zero", which holds its previous value in one or more paths through the process File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 15
-Info (10041): Inferred latch for "zero" at ALU.vhd(15) File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 15
-Info (10041): Inferred latch for "carry" at ALU.vhd(15) File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 15
-Info (12128): Elaborating entity "memory" for hierarchy "datapath:dat_path|memory:mem0_60" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 163
-Info (12128): Elaborating entity "z9" for hierarchy "datapath:dat_path|z9:Zero7" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 165
-Info (12128): Elaborating entity "se6" for hierarchy "datapath:dat_path|se6:SignE6" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 166
-Info (12128): Elaborating entity "se9" for hierarchy "datapath:dat_path|se9:SignE9" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 167
-Info (12128): Elaborating entity "priority_encoder" for hierarchy "datapath:dat_path|priority_encoder:PE" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 168
-Info (12128): Elaborating entity "reg_file" for hierarchy "datapath:dat_path|reg_file:RF" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 170
+Info (12128): Elaborating entity "reg_16bit" for hierarchy "datapath:dat_path|reg_16bit:ProgC" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 177
+Info (12128): Elaborating entity "alu" for hierarchy "datapath:dat_path|alu:AritLU" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 181
+Warning (10631): VHDL Process Statement warning at ALU.vhd(20): inferring latch(es) for signal or variable "carry", which holds its previous value in one or more paths through the process File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 20
+Warning (10631): VHDL Process Statement warning at ALU.vhd(20): inferring latch(es) for signal or variable "zero", which holds its previous value in one or more paths through the process File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 20
+Info (10041): Inferred latch for "zero" at ALU.vhd(20) File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 20
+Info (10041): Inferred latch for "carry" at ALU.vhd(20) File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 20
+Info (12128): Elaborating entity "memory" for hierarchy "datapath:dat_path|memory:mem0_60" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 183
+Info (12128): Elaborating entity "z9" for hierarchy "datapath:dat_path|z9:Zero7" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 185
+Info (12128): Elaborating entity "se6" for hierarchy "datapath:dat_path|se6:SignE6" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 186
+Info (12128): Elaborating entity "se9" for hierarchy "datapath:dat_path|se9:SignE9" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 187
+Info (12128): Elaborating entity "priority_encoder" for hierarchy "datapath:dat_path|priority_encoder:PE" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 188
+Info (12128): Elaborating entity "reg_file" for hierarchy "datapath:dat_path|reg_file:RF" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 190
 Warning (10492): VHDL Process Statement warning at reg_file.vhd(46): signal "registers_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd Line: 46
 Warning (10492): VHDL Process Statement warning at reg_file.vhd(49): signal "registers_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd Line: 49
-Warning (10492): VHDL Process Statement warning at reg_file.vhd(53): signal "wr_en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd Line: 53
-Info (12128): Elaborating entity "mux4to1" for hierarchy "datapath:dat_path|mux4to1:mux_a" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 180
-Warning (10492): VHDL Process Statement warning at mux4to1.vhd(16): signal "in_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux4to1.vhd Line: 16
-Warning (10492): VHDL Process Statement warning at mux4to1.vhd(18): signal "in_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux4to1.vhd Line: 18
-Warning (10492): VHDL Process Statement warning at mux4to1.vhd(20): signal "in_3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux4to1.vhd Line: 20
-Warning (10492): VHDL Process Statement warning at mux4to1.vhd(22): signal "in_4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux4to1.vhd Line: 22
-Info (12128): Elaborating entity "mux2to1" for hierarchy "datapath:dat_path|mux2to1:mux_c" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 184
-Warning (10492): VHDL Process Statement warning at mux2to1.vhd(16): signal "in_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux2to1.vhd Line: 16
-Warning (10492): VHDL Process Statement warning at mux2to1.vhd(18): signal "in_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux2to1.vhd Line: 18
-Info (12128): Elaborating entity "mux3bit2to1" for hierarchy "datapath:dat_path|mux3bit2to1:mux_d" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 185
-Warning (10492): VHDL Process Statement warning at mux3bit2to1.vhd(16): signal "in_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit2to1.vhd Line: 16
-Warning (10492): VHDL Process Statement warning at mux3bit2to1.vhd(18): signal "in_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit2to1.vhd Line: 18
-Info (12128): Elaborating entity "mux3bit6to1" for hierarchy "datapath:dat_path|mux3bit6to1:mux_e" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 186
-Warning (10492): VHDL Process Statement warning at mux3bit6to1.vhd(16): signal "in_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd Line: 16
-Warning (10492): VHDL Process Statement warning at mux3bit6to1.vhd(18): signal "in_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd Line: 18
-Warning (10492): VHDL Process Statement warning at mux3bit6to1.vhd(20): signal "in_3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd Line: 20
-Warning (10492): VHDL Process Statement warning at mux3bit6to1.vhd(22): signal "in_4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd Line: 22
-Warning (10492): VHDL Process Statement warning at mux3bit6to1.vhd(24): signal "in_5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd Line: 24
-Warning (10492): VHDL Process Statement warning at mux3bit6to1.vhd(26): signal "in_6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd Line: 26
-Warning (10492): VHDL Process Statement warning at mux3bit6to1.vhd(28): signal "in_6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd Line: 28
-Info (12128): Elaborating entity "mux6to1" for hierarchy "datapath:dat_path|mux6to1:B_mux" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 197
-Warning (10492): VHDL Process Statement warning at mux6to1.vhd(16): signal "in_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 16
-Warning (10492): VHDL Process Statement warning at mux6to1.vhd(18): signal "in_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 18
-Warning (10492): VHDL Process Statement warning at mux6to1.vhd(20): signal "in_3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 20
-Warning (10492): VHDL Process Statement warning at mux6to1.vhd(22): signal "in_4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 22
-Warning (10492): VHDL Process Statement warning at mux6to1.vhd(24): signal "in_5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 24
-Warning (10492): VHDL Process Statement warning at mux6to1.vhd(26): signal "in_6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 26
-Warning (10492): VHDL Process Statement warning at mux6to1.vhd(28): signal "in_6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 28
+Info (12128): Elaborating entity "mux4to1" for hierarchy "datapath:dat_path|mux4to1:mux_b" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 203
+Info (12128): Elaborating entity "mux2to1" for hierarchy "datapath:dat_path|mux2to1:mux_c" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 205
+Info (12128): Elaborating entity "mux3bit2to1" for hierarchy "datapath:dat_path|mux3bit2to1:mux_d" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 206
+Info (12128): Elaborating entity "mux3bit6to1" for hierarchy "datapath:dat_path|mux3bit6to1:mux_e" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 207
+Info (12128): Elaborating entity "mux6to1" for hierarchy "datapath:dat_path|mux6to1:B_mux" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 219
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clk" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/main.vhd Line: 6
     Warning (15610): No output dependent on input pin "reset" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/main.vhd Line: 6
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 935 megabytes
-    Info: Processing ended: Mon Oct 29 15:07:51 2018
-    Info: Elapsed time: 00:00:36
-    Info: Total CPU time (on all processors): 00:00:42
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 945 megabytes
+    Info: Processing ended: Tue Oct 30 00:33:19 2018
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:31
 
 

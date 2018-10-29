@@ -9,7 +9,7 @@ end entity;
 
 architecture behave of mux3bit2to1 is
 begin
-	process(sel, in_1, in_2)
+	process(sel)
 	begin
 		case sel is
 		when '0' =>

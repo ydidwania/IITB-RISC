@@ -9,7 +9,7 @@ end entity;
 
 architecture behave of mux2to1 is
 begin
-	process(sel)
+	process(sel, in_1, in_2)
 	begin
 		case sel is
 		when '0' =>

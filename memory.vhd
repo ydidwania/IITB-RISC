@@ -14,7 +14,7 @@ end entity;
 architecture comb of memory is
 
 type mem_array is array (0 to 60) of std_logic_vector(0 to 15);
-signal RAM: mem_array:= (X"0050",others => X"0000");
+signal RAM: mem_array:= (X"3007", X"3205", X"0050",others => X"0000");
 
 begin
 	Synch_RAM: process(clk)

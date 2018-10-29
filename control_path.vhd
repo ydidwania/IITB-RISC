@@ -6,7 +6,7 @@ use ieee.std_logic_1164.all;
 entity control_path is
 	port (
 		opcode: in std_logic_vector (0 to 15);
-		C,Z,alu_z,F0,F1,clk: in std_logic;
+		C,Z,alu_z,F0,F1,clk, reset: in std_logic;
 		control_word: out std_logic_vector (0 to 28)
 	);
 end entity;
@@ -43,7 +43,7 @@ d7: mux_state port map(inp0=>"10010", inp1=>"00001",s=>F1, z=>dec7);
 -- of the instruction for this to work
 ------------------------------------------------
 	-- s1=1 if opcode=SW, else s1=0 if opcode=LW
-	process(opcode)
+	process(opcode,C, Z)
 		variable f_1,f_0 : boolean;
 	begin
 			if (opcode(0 to 3)="0101") then --SW
@@ -121,7 +121,11 @@ d7: mux_state port map(inp0=>"10010", inp1=>"00001",s=>F1, z=>dec7);
 	state_change: process(clk)
 	begin 
 		if (rising_edge(clk)) then
-			current_state<=next_state;
+			if reset='1' then
+				current_state<="00001";
+			else 
+				current_state<=next_state;
+			end if;
 		end if;
 	end process state_change;
 	

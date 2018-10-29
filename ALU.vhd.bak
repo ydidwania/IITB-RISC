@@ -3,14 +3,9 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
 
 entity alu is
-generic(
-		zero16 : std_logic_vector := "0000000000000000";
-		one16 : std_logic_vector := "0000000000000001"
-	);
 	port(
 		alu_a,alu_b	: in std_logic_vector(0 to 15);
 	    sel		: in std_logic_vector(0 to 1);
-		 reset:  in std_logic;
 	    alu_out 		: out std_logic_vector(0 to 15);
 	    carry,zero,a_zero  : out std_logic);
 end entity;
@@ -40,19 +35,12 @@ architecture behave of alu is
 				when  others=>
 					op 	:= std_logic_vector(unsigned(alu_a) - unsigned(alu_b));
 		end case;
-		
---		if reset='1' then
---			alu_out<=zero16;
---		else
-			alu_out <= op;
---		end if;
-		
 		if(op = "0000000000000000") then
 			z := '1';
 		else
 			z :='0';
 		end if;
-		
+		alu_out <= op;
 		a_zero  <= z;
 		if (sel="01" or sel="10") then
 			zero   <= z;			
