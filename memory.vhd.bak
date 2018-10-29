@@ -1,0 +1,38 @@
+
+library ieee;	
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all; 
+
+entity memory is
+	port(
+	    din, addr   : in std_logic_vector(0 to 15);
+	    clk,we	: in std_logic;
+	    dout: out std_logic_vector(0 to 15);
+end entity;
+
+type mem_array is array (0 to 2**16-1) of	
+std_ulogic_vector(15 downto 0);
+signal RAM: mem_array;
+
+architecture comb of memory is
+
+Synch_RAM:	
+        process	(clk)
+
+begin
+
+if rising_edge (clk) then
+
+   if we = ‘1’ then
+ 
+  RAM(to_integer (addr)) <= din ;
+
+end if;
+
+end if;
+
+end process;
+
+dout <=	RAM(to_integer (addr));
+
+end 

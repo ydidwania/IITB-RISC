@@ -1,5 +1,5 @@
 Flow report for Multicycle-IITB-RISC
-Sat Oct 27 00:09:13 2018
+Sun Oct 28 23:25:51 2018
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ agreement for further details.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Sat Oct 27 00:09:13 2018       ;
+; Flow Status           ; Successful - Sun Oct 28 23:25:51 2018       ;
 ; Quartus Prime Version ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name         ; Multicycle-IITB-RISC                        ;
-; Top-level Entity Name ; priority_encoder                            ;
+; Top-level Entity Name ; main                                        ;
 ; Family                ; MAX V                                       ;
 ; Device                ; 5M1270ZT144C5                               ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 27 / 1,270 ( 2 % )                          ;
-; Total pins            ; 15 / 114 ( 13 % )                           ;
+; Total logic elements  ; 0 / 1,270 ( 0 % )                           ;
+; Total pins            ; 2 / 114 ( 2 % )                             ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
 +-----------------------+---------------------------------------------+
@@ -60,39 +60,30 @@ agreement for further details.
 +-------------------+----------------------+
 ; Option            ; Setting              ;
 +-------------------+----------------------+
-; Start date & time ; 10/27/2018 00:08:54  ;
+; Start date & time ; 10/28/2018 23:25:28  ;
 ; Main task         ; Compilation          ;
 ; Revision Name     ; Multicycle-IITB-RISC ;
 +-------------------+----------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                                                                                 ;
-+-------------------------------+------------------------------------------------------------------------------------------------------------+----------------------+-----------------------------+----------------+
-; Assignment Name               ; Value                                                                                                      ; Default Value        ; Entity Name                 ; Section Id     ;
-+-------------------------------+------------------------------------------------------------------------------------------------------------+----------------------+-----------------------------+----------------+
-; COMPILER_SIGNATURE_ID         ; 66610803205901.154057913432339                                                                             ; --                   ; --                          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT        ; Verilog Hdl                                                                                                ; --                   ; --                          ; eda_simulation ;
-; EDA_SIMULATION_TOOL           ; ModelSim-Altera (Verilog)                                                                                  ; <None>               ; --                          ; --             ;
-; EDA_TIME_SCALE                ; 1 ps                                                                                                       ; --                   ; --                          ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP        ; 85                                                                                                         ; --                   ; --                          ; --             ;
-; MIN_CORE_JUNCTION_TEMP        ; 0                                                                                                          ; --                   ; --                          ; --             ;
-; MISC_FILE                     ; instantiating_memory_system/synthesis/../instantiating_memory_system.cmp                                   ; --                   ; --                          ; --             ;
-; MISC_FILE                     ; instantiating_memory_system/synthesis/../../instantiating_memory_system.qsys                               ; --                   ; --                          ; --             ;
-; MISC_FILE                     ; instantiating_memory_system/simulation/../../instantiating_memory_system.qsys                              ; --                   ; --                          ; --             ;
-; MISC_FILE                     ; instantiating_memory_system/simulation/instantiating_memory_system.v                                       ; --                   ; --                          ; --             ;
-; MISC_FILE                     ; instantiating_memory_system/simulation/submodules/instantiating_memory_system_system_0.v                   ; --                   ; --                          ; --             ;
-; MISC_FILE                     ; instantiating_memory_system/simulation/submodules/instantiating_memory_system_system_0_onchip_memory_0.hex ; --                   ; --                          ; --             ;
-; MISC_FILE                     ; instantiating_memory_system/simulation/submodules/instantiating_memory_system_system_0_onchip_memory_0.v   ; --                   ; --                          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION ; No Heat Sink With Still Air                                                                                ; --                   ; --                          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY      ; output_files                                                                                               ; --                   ; --                          ; --             ;
-; SLD_FILE                      ; instantiating_memory_system/synthesis/instantiating_memory_system.debuginfo                                ; --                   ; --                          ; --             ;
-; SLD_INFO                      ; QSYS_NAME instantiating_memory_system HAS_SOPCINFO 1 GENERATION_ID 1540568855                              ; --                   ; instantiating_memory_system ; --             ;
-; SOPCINFO_FILE                 ; instantiating_memory_system/synthesis/../../instantiating_memory_system.sopcinfo                           ; --                   ; --                          ; --             ;
-; SPD_FILE                      ; instantiating_memory_system/simulation/../instantiating_memory_system.spd                                  ; --                   ; --                          ; --             ;
-; SYNTHESIS_ONLY_QIP            ; On                                                                                                         ; --                   ; --                          ; --             ;
-; TOP_LEVEL_ENTITY              ; priority_encoder                                                                                           ; Multicycle-IITB-RISC ; --                          ; --             ;
-+-------------------------------+------------------------------------------------------------------------------------------------------------+----------------------+-----------------------------+----------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                            ;
++-------------------------------------+---------------------------------+----------------------+-------------+----------------+
+; Assignment Name                     ; Value                           ; Default Value        ; Entity Name ; Section Id     ;
++-------------------------------------+---------------------------------+----------------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 220295162002240.154074932806664 ; --                   ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                     ; --                   ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)       ; <None>               ; --          ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                            ; --                   ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --                   ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --                   ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                        ; --                   ; main        ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --                   ; main        ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --                   ; main        ; Top            ;
+; POWER_PRESET_COOLING_SOLUTION       ; No Heat Sink With Still Air     ; --                   ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --                   ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; main                            ; Multicycle-IITB-RISC ; --          ; --             ;
++-------------------------------------+---------------------------------+----------------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -100,12 +91,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 944 MB              ; 00:00:30                           ;
-; Fitter                    ; 00:00:02     ; 1.0                     ; 1044 MB             ; 00:00:01                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 791 MB              ; 00:00:00                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 724 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 1024 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:17     ; --                      ; --                  ; 00:00:32                           ;
+; Analysis & Synthesis      ; 00:00:17     ; 1.0                     ; 939 MB              ; 00:00:38                           ;
+; Fitter                    ; 00:00:01     ; 1.0                     ; 1027 MB             ; 00:00:01                           ;
+; Assembler                 ; 00:00:00     ; 1.0                     ; 791 MB              ; 00:00:00                           ;
+; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 706 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 1021 MB             ; 00:00:00                           ;
+; Total                     ; 00:00:19     ; --                      ; --                  ; 00:00:40                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

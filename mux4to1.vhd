@@ -18,7 +18,7 @@ begin
 			mux_out <= in_2;
 		when "10" =>
 			mux_out <= in_3;
-		when "11" =>
+		when others =>
 			mux_out <= in_4;
 		end case;
 	end process;

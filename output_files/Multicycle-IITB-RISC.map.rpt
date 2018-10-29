@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Multicycle-IITB-RISC
-Sat Oct 27 00:09:07 2018
+Sun Oct 28 23:25:45 2018
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -14,8 +14,18 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: datapath:dat_path
+ 10. Port Connectivity Checks: "datapath:dat_path|mux6to1:B_mux"
+ 11. Port Connectivity Checks: "datapath:dat_path|mux4to1:T2_mux"
+ 12. Port Connectivity Checks: "datapath:dat_path|mux3bit6to1:mux_e"
+ 13. Port Connectivity Checks: "datapath:dat_path|mux4to1:mux_b"
+ 14. Port Connectivity Checks: "control_path:ctrl_path|mux_state:d7"
+ 15. Port Connectivity Checks: "control_path:ctrl_path|mux_state:d6"
+ 16. Port Connectivity Checks: "control_path:ctrl_path|mux_state:d5"
+ 17. Port Connectivity Checks: "control_path:ctrl_path|mux_state:d4"
+ 18. Port Connectivity Checks: "control_path:ctrl_path|mux_state:d3"
+ 19. Port Connectivity Checks: "control_path:ctrl_path|mux_state:d2"
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -42,13 +52,13 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sat Oct 27 00:09:07 2018       ;
+; Analysis & Synthesis Status ; Successful - Sun Oct 28 23:25:45 2018       ;
 ; Quartus Prime Version       ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name               ; Multicycle-IITB-RISC                        ;
-; Top-level Entity Name       ; priority_encoder                            ;
+; Top-level Entity Name       ; main                                        ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 27                                          ;
-; Total pins                  ; 15                                          ;
+; Total logic elements        ; 0                                           ;
+; Total pins                  ; 2                                           ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -60,7 +70,7 @@ agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value        ;
 +----------------------------------------------------------------------------+--------------------+----------------------+
 ; Device                                                                     ; 5M1270ZT144C5      ;                      ;
-; Top-level entity name                                                      ; priority_encoder   ; Multicycle-IITB-RISC ;
+; Top-level entity name                                                      ; main               ; Multicycle-IITB-RISC ;
 ; Family name                                                                ; MAX V              ; Cyclone V            ;
 ; Use smart compilation                                                      ; Off                ; Off                  ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                   ;
@@ -146,7 +156,23 @@ agreement for further details.
 +----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                           ; Library ;
 +----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
+; mux3bit6to1.vhd                  ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd      ;         ;
+; mux3bit2to1.vhd                  ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit2to1.vhd      ;         ;
+; main.vhd                         ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/main.vhd             ;         ;
+; memory.vhd                       ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/memory.vhd           ;         ;
+; z9.vhd                           ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/z9.vhd               ;         ;
+; datapath.vhd                     ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd         ;         ;
+; mux2to1.vhd                      ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux2to1.vhd          ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd              ;         ;
+; mux6to1.vhd                      ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd          ;         ;
+; mux4to1.vhd                      ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux4to1.vhd          ;         ;
+; se9.vhd                          ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/se9.vhd              ;         ;
+; se6.vhd                          ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/se6.vhd              ;         ;
+; reg_file.vhd                     ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd         ;         ;
+; reg_16bit.vhd                    ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_16bit.vhd        ;         ;
 ; priority_encoder.vhd             ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd ;         ;
+; mux_state.vhd                    ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux_state.vhd        ;         ;
+; control_path.vhd                 ; yes             ; User VHDL File  ; /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd     ;         ;
 +----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
 
 
@@ -155,42 +181,38 @@ agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 27    ;
-;     -- Combinational with no register       ; 19    ;
+; Total logic elements                        ; 0     ;
+;     -- Combinational with no register       ; 0     ;
 ;     -- Register only                        ; 0     ;
-;     -- Combinational with a register        ; 8     ;
+;     -- Combinational with a register        ; 0     ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 15    ;
-;     -- 3 input functions                    ; 4     ;
-;     -- 2 input functions                    ; 8     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- 2 input functions                    ; 0     ;
 ;     -- 1 input functions                    ; 0     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 27    ;
+;     -- normal mode                          ; 0     ;
 ;     -- arithmetic mode                      ; 0     ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
 ;     -- synchronous clear/load mode          ; 0     ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 8     ;
-; I/O pins                                    ; 15    ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 8     ;
-; Total fan-out                               ; 101   ;
-; Average fan-out                             ; 2.40  ;
+; Total registers                             ; 0     ;
+; I/O pins                                    ; 2     ;
 +---------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                     ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name      ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+------------------+--------------+
-; |priority_encoder          ; 27 (27)     ; 8            ; 0          ; 15   ; 0            ; 19 (19)      ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |priority_encoder   ; priority_encoder ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+; |main                      ; 0 (0)       ; 0            ; 0          ; 2    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main               ; main        ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -199,7 +221,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 8     ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -209,13 +231,135 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |priority_encoder|Z        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dat_path ;
++----------------+------------------+----------------------------+
+; Parameter Name ; Value            ; Type                       ;
++----------------+------------------+----------------------------+
+; zero16         ; 0000000000000000 ; Unsigned Binary            ;
+; one16          ; 0000000000000001 ; Unsigned Binary            ;
++----------------+------------------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:dat_path|mux6to1:B_mux" ;
++-------------+-------+----------+----------------------------+
+; Port        ; Type  ; Severity ; Details                    ;
++-------------+-------+----------+----------------------------+
+; in_5        ; Input ; Info     ; Stuck at GND               ;
+; in_6[0..14] ; Input ; Info     ; Stuck at GND               ;
+; in_6[15]    ; Input ; Info     ; Stuck at VCC               ;
++-------------+-------+----------+----------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:dat_path|mux4to1:T2_mux" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; in_4 ; Input ; Info     ; Stuck at GND                       ;
++------+-------+----------+------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:dat_path|mux3bit6to1:mux_e" ;
++------+-------+----------+---------------------------------------+
+; Port ; Type  ; Severity ; Details                               ;
++------+-------+----------+---------------------------------------+
+; in_5 ; Input ; Info     ; Stuck at VCC                          ;
+; in_6 ; Input ; Info     ; Stuck at GND                          ;
++------+-------+----------+---------------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:dat_path|mux4to1:mux_b" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; in_4 ; Input ; Info     ; Stuck at GND                      ;
++------+-------+----------+-----------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "control_path:ctrl_path|mux_state:d7" ;
++------------+-------+----------+---------------------------------+
+; Port       ; Type  ; Severity ; Details                         ;
++------------+-------+----------+---------------------------------+
+; inp0[3..2] ; Input ; Info     ; Stuck at GND                    ;
+; inp0[4]    ; Input ; Info     ; Stuck at VCC                    ;
+; inp0[1]    ; Input ; Info     ; Stuck at VCC                    ;
+; inp0[0]    ; Input ; Info     ; Stuck at GND                    ;
+; inp1[4..1] ; Input ; Info     ; Stuck at GND                    ;
+; inp1[0]    ; Input ; Info     ; Stuck at VCC                    ;
++------------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "control_path:ctrl_path|mux_state:d6" ;
++------------+-------+----------+---------------------------------+
+; Port       ; Type  ; Severity ; Details                         ;
++------------+-------+----------+---------------------------------+
+; inp0[3..2] ; Input ; Info     ; Stuck at GND                    ;
+; inp0[4]    ; Input ; Info     ; Stuck at VCC                    ;
+; inp0[1]    ; Input ; Info     ; Stuck at VCC                    ;
+; inp0[0]    ; Input ; Info     ; Stuck at GND                    ;
+; inp1[4..1] ; Input ; Info     ; Stuck at GND                    ;
+; inp1[0]    ; Input ; Info     ; Stuck at VCC                    ;
++------------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "control_path:ctrl_path|mux_state:d5" ;
++------------+-------+----------+---------------------------------+
+; Port       ; Type  ; Severity ; Details                         ;
++------------+-------+----------+---------------------------------+
+; inp0[3..0] ; Input ; Info     ; Stuck at GND                    ;
+; inp0[4]    ; Input ; Info     ; Stuck at VCC                    ;
+; inp1[4..1] ; Input ; Info     ; Stuck at GND                    ;
+; inp1[0]    ; Input ; Info     ; Stuck at VCC                    ;
++------------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "control_path:ctrl_path|mux_state:d4" ;
++------------+-------+----------+---------------------------------+
+; Port       ; Type  ; Severity ; Details                         ;
++------------+-------+----------+---------------------------------+
+; inp0[3..0] ; Input ; Info     ; Stuck at GND                    ;
+; inp0[4]    ; Input ; Info     ; Stuck at VCC                    ;
+; inp1[4..1] ; Input ; Info     ; Stuck at GND                    ;
+; inp1[0]    ; Input ; Info     ; Stuck at VCC                    ;
++------------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "control_path:ctrl_path|mux_state:d3" ;
++------------+-------+----------+---------------------------------+
+; Port       ; Type  ; Severity ; Details                         ;
++------------+-------+----------+---------------------------------+
+; inp0[4..1] ; Input ; Info     ; Stuck at GND                    ;
+; inp0[0]    ; Input ; Info     ; Stuck at VCC                    ;
+; inp1[3..2] ; Input ; Info     ; Stuck at VCC                    ;
+; inp1[1..0] ; Input ; Info     ; Stuck at GND                    ;
+; inp1[4]    ; Input ; Info     ; Stuck at GND                    ;
++------------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "control_path:ctrl_path|mux_state:d2" ;
++------------+-------+----------+---------------------------------+
+; Port       ; Type  ; Severity ; Details                         ;
++------------+-------+----------+---------------------------------+
+; inp0[4]    ; Input ; Info     ; Stuck at GND                    ;
+; inp0[3]    ; Input ; Info     ; Stuck at VCC                    ;
+; inp0[2]    ; Input ; Info     ; Stuck at GND                    ;
+; inp0[1]    ; Input ; Info     ; Stuck at VCC                    ;
+; inp0[0]    ; Input ; Info     ; Stuck at GND                    ;
+; inp1[2..0] ; Input ; Info     ; Stuck at GND                    ;
+; inp1[4]    ; Input ; Info     ; Stuck at GND                    ;
+; inp1[3]    ; Input ; Info     ; Stuck at VCC                    ;
++------------+-------+----------+---------------------------------+
 
 
 +-------------------------------+
@@ -224,16 +368,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Sat Oct 27 00:08:54 2018
+    Info: Processing started: Sun Oct 28 23:25:28 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Multicycle-IITB-RISC -c Multicycle-IITB-RISC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file instantiating_memory_system/synthesis/instantiating_memory_system.v
-    Info (12023): Found entity 1: instantiating_memory_system File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/instantiating_memory_system/synthesis/instantiating_memory_system.v Line: 6
-Info (12021): Found 1 design units, including 1 entities, in source file instantiating_memory_system/synthesis/submodules/instantiating_memory_system_system_0.v
-    Info (12023): Found entity 1: instantiating_memory_system_system_0 File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/instantiating_memory_system/synthesis/submodules/instantiating_memory_system_system_0.v Line: 6
-Info (12021): Found 1 design units, including 1 entities, in source file instantiating_memory_system/synthesis/submodules/instantiating_memory_system_system_0_onchip_memory_0.v
-    Info (12023): Found entity 1: instantiating_memory_system_system_0_onchip_memory_0 File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/instantiating_memory_system/synthesis/submodules/instantiating_memory_system_system_0_onchip_memory_0.v Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file mux3bit6to1.vhd
+    Info (12022): Found design unit 1: mux3bit6to1-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd Line: 10
+    Info (12023): Found entity 1: mux3bit6to1 File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux3bit2to1.vhd
+    Info (12022): Found design unit 1: mux3bit2to1-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit2to1.vhd Line: 10
+    Info (12023): Found entity 1: mux3bit2to1 File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit2to1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file main.vhd
+    Info (12022): Found design unit 1: main-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/main.vhd Line: 10
+    Info (12023): Found entity 1: main File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/main.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file memory.vhd
+    Info (12022): Found design unit 1: memory-comb File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/memory.vhd Line: 14
+    Info (12023): Found entity 1: memory File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/memory.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file z9.vhd
     Info (12022): Found design unit 1: z9-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/z9.vhd Line: 11
     Info (12023): Found entity 1: z9 File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/z9.vhd Line: 4
@@ -271,35 +421,67 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux_sta
     Info (12022): Found design unit 1: mux_state-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux_state.vhd Line: 11
     Info (12023): Found entity 1: mux_state File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux_state.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file control_path.vhd
-    Info (12022): Found design unit 1: control_path-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 15
+    Info (12022): Found design unit 1: control_path-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 13
     Info (12023): Found entity 1: control_path File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 6
-Info (12127): Elaborating entity "priority_encoder" for the top level hierarchy
-Warning (13034): The following nodes have both tri-state and non-tri-state drivers
-    Warning (13035): Inserted always-enabled tri-state buffer between "Z[2]" and its non-tri-state driver. File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
-    Warning (13035): Inserted always-enabled tri-state buffer between "Z[1]" and its non-tri-state driver. File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
-    Warning (13035): Inserted always-enabled tri-state buffer between "Z[0]" and its non-tri-state driver. File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
-Info (13060): One or more bidirectional pins are fed by always enabled tri-state buffers
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "Z[2]" is moved to its source File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "Z[1]" is moved to its source File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "Z[0]" is moved to its source File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
-Warning (13009): TRI or OPNDRN buffers permanently enabled
-    Warning (13010): Node "Z[2]~synth" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
-    Warning (13010): Node "Z[1]~synth" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
-    Warning (13010): Node "Z[0]~synth" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd Line: 10
-Info (21057): Implemented 42 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 2 output pins
-    Info (21060): Implemented 3 bidirectional pins
-    Info (21061): Implemented 27 logic cells
-Warning (20013): Ignored 22 assignments for entity "instantiating_memory_system" -- entity does not exist in design
-    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME Qsys -entity instantiating_memory_system -sip instantiating_memory_system/simulation/instantiating_memory_system.sip -library lib_instantiating_memory_system was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 16.1 -entity instantiating_memory_system -sip instantiating_memory_system/simulation/instantiating_memory_system.sip -library lib_instantiating_memory_system was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity instantiating_memory_system -sip instantiating_memory_system/simulation/instantiating_memory_system.sip -library lib_instantiating_memory_system was ignored
-Warning (20013): Ignored 37 assignments for entity "instantiating_memory_system_system_0_onchip_memory_0" -- entity does not exist in design
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 944 megabytes
-    Info: Processing ended: Sat Oct 27 00:09:07 2018
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:30
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Info (12128): Elaborating entity "control_path" for hierarchy "control_path:ctrl_path" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/main.vhd Line: 35
+Warning (10492): VHDL Process Statement warning at control_path.vhd(58): signal "C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 58
+Warning (10492): VHDL Process Statement warning at control_path.vhd(58): signal "Z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 58
+Info (12128): Elaborating entity "mux_state" for hierarchy "control_path:ctrl_path|mux_state:d2" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 31
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:dat_path" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/main.vhd Line: 37
+Info (12128): Elaborating entity "reg_16bit" for hierarchy "datapath:dat_path|reg_16bit:ProgC" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 157
+Warning (10492): VHDL Process Statement warning at reg_16bit.vhd(15): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_16bit.vhd Line: 15
+Info (12128): Elaborating entity "alu" for hierarchy "datapath:dat_path|alu:AritLU" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 161
+Warning (10631): VHDL Process Statement warning at ALU.vhd(15): inferring latch(es) for signal or variable "carry", which holds its previous value in one or more paths through the process File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 15
+Warning (10631): VHDL Process Statement warning at ALU.vhd(15): inferring latch(es) for signal or variable "zero", which holds its previous value in one or more paths through the process File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 15
+Info (10041): Inferred latch for "zero" at ALU.vhd(15) File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 15
+Info (10041): Inferred latch for "carry" at ALU.vhd(15) File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 15
+Info (12128): Elaborating entity "memory" for hierarchy "datapath:dat_path|memory:mem0_60" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 163
+Info (12128): Elaborating entity "z9" for hierarchy "datapath:dat_path|z9:Zero7" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 165
+Info (12128): Elaborating entity "se6" for hierarchy "datapath:dat_path|se6:SignE6" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 166
+Info (12128): Elaborating entity "se9" for hierarchy "datapath:dat_path|se9:SignE9" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 167
+Info (12128): Elaborating entity "priority_encoder" for hierarchy "datapath:dat_path|priority_encoder:PE" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 168
+Info (12128): Elaborating entity "reg_file" for hierarchy "datapath:dat_path|reg_file:RF" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 170
+Warning (10492): VHDL Process Statement warning at reg_file.vhd(46): signal "registers_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd Line: 46
+Warning (10492): VHDL Process Statement warning at reg_file.vhd(49): signal "registers_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd Line: 49
+Warning (10492): VHDL Process Statement warning at reg_file.vhd(53): signal "wr_en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd Line: 53
+Info (12128): Elaborating entity "mux4to1" for hierarchy "datapath:dat_path|mux4to1:mux_a" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 180
+Warning (10492): VHDL Process Statement warning at mux4to1.vhd(16): signal "in_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux4to1.vhd Line: 16
+Warning (10492): VHDL Process Statement warning at mux4to1.vhd(18): signal "in_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux4to1.vhd Line: 18
+Warning (10492): VHDL Process Statement warning at mux4to1.vhd(20): signal "in_3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux4to1.vhd Line: 20
+Warning (10492): VHDL Process Statement warning at mux4to1.vhd(22): signal "in_4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux4to1.vhd Line: 22
+Info (12128): Elaborating entity "mux2to1" for hierarchy "datapath:dat_path|mux2to1:mux_c" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 184
+Warning (10492): VHDL Process Statement warning at mux2to1.vhd(16): signal "in_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux2to1.vhd Line: 16
+Warning (10492): VHDL Process Statement warning at mux2to1.vhd(18): signal "in_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux2to1.vhd Line: 18
+Info (12128): Elaborating entity "mux3bit2to1" for hierarchy "datapath:dat_path|mux3bit2to1:mux_d" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 185
+Warning (10492): VHDL Process Statement warning at mux3bit2to1.vhd(16): signal "in_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit2to1.vhd Line: 16
+Warning (10492): VHDL Process Statement warning at mux3bit2to1.vhd(18): signal "in_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit2to1.vhd Line: 18
+Info (12128): Elaborating entity "mux3bit6to1" for hierarchy "datapath:dat_path|mux3bit6to1:mux_e" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 186
+Warning (10492): VHDL Process Statement warning at mux3bit6to1.vhd(16): signal "in_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd Line: 16
+Warning (10492): VHDL Process Statement warning at mux3bit6to1.vhd(18): signal "in_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd Line: 18
+Warning (10492): VHDL Process Statement warning at mux3bit6to1.vhd(20): signal "in_3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd Line: 20
+Warning (10492): VHDL Process Statement warning at mux3bit6to1.vhd(22): signal "in_4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd Line: 22
+Warning (10492): VHDL Process Statement warning at mux3bit6to1.vhd(24): signal "in_5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd Line: 24
+Warning (10492): VHDL Process Statement warning at mux3bit6to1.vhd(26): signal "in_6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd Line: 26
+Warning (10492): VHDL Process Statement warning at mux3bit6to1.vhd(28): signal "in_6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd Line: 28
+Info (12128): Elaborating entity "mux6to1" for hierarchy "datapath:dat_path|mux6to1:B_mux" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 197
+Warning (10492): VHDL Process Statement warning at mux6to1.vhd(16): signal "in_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 16
+Warning (10492): VHDL Process Statement warning at mux6to1.vhd(18): signal "in_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 18
+Warning (10492): VHDL Process Statement warning at mux6to1.vhd(20): signal "in_3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 20
+Warning (10492): VHDL Process Statement warning at mux6to1.vhd(22): signal "in_4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 22
+Warning (10492): VHDL Process Statement warning at mux6to1.vhd(24): signal "in_5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 24
+Warning (10492): VHDL Process Statement warning at mux6to1.vhd(26): signal "in_6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 26
+Warning (10492): VHDL Process Statement warning at mux6to1.vhd(28): signal "in_6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd Line: 28
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/main.vhd Line: 6
+    Warning (15610): No output dependent on input pin "reset" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/main.vhd Line: 6
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
+    Info: Peak virtual memory: 939 megabytes
+    Info: Processing ended: Sun Oct 28 23:25:45 2018
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:38
 
 

@@ -6,7 +6,7 @@ use ieee.numeric_std.all;
 entity memory is
 	port(
 	    Mem_di, Mem_addr   : in std_logic_vector(0 to 15);
-	    clk, Mem_we	: in std_logic;
+	    clk, Mem_we, Mem_re	: in std_logic;
 	    Mem_do: out std_logic_vector(0 to 15)
 	);
 end entity;
@@ -14,7 +14,7 @@ end entity;
 architecture comb of memory is
 
 type mem_array is array (0 to 60) of std_logic_vector(0 to 15);
-signal RAM: mem_array;
+signal RAM: mem_array:= (X"0050",others => X"0000");
 
 begin
 	Synch_RAM: process(clk)
@@ -24,6 +24,10 @@ begin
 				RAM(to_integer(unsigned(Mem_addr))) <= Mem_di ;
 			end if;	
 		end if;
+		
+		--if Mem_re='1' then
+		--	Mem_do <=	RAM(to_integer(unsigned(Mem_addr)));
+		--end if;
 	end process;
 	Mem_do <=	RAM(to_integer(unsigned(Mem_addr)));
 end comb;

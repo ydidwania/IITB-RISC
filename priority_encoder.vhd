@@ -66,7 +66,7 @@ begin
                 when "100" => d<=ir(0 to 2)&"00000";
                 when "101" => d<=ir(0 to 1)&"000000";
                 when "110" => d<=ir(0 to 0)&"0000000";
-                when "111" => d<="00000000";
+                when others => d<="00000000";
             end case;
         end if; 
     end process;

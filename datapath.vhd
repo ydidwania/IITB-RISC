@@ -111,7 +111,7 @@ end component;
 component memory is
 	port(
 	    Mem_di, Mem_addr   : in std_logic_vector(0 to 15);
-	    clk, Mem_we	: in std_logic;
+	    clk, Mem_we, Mem_re	: in std_logic;
 	    Mem_do: out std_logic_vector(0 to 15)
 	);
 end component;
@@ -160,7 +160,7 @@ Temp1 : reg_16bit 	 port map(d => t1_in, clk => clk, enable => t1, q => t1_out);
 Temp2 : reg_16bit 	 port map(d => t2_in, clk => clk, enable => t2, q => t2_out); 				-- t2 register
 AritLU: ALU       	 port map(alu_a => ALU_a, alu_b => ALU_b, sel => ALU_sel, alu_out => ALU_out,
 				  carry => carry, zero => zero, a_zero => alu_zero); 				-- ALU
-mem0_60: memory port map(Mem_di=>Mem_di, Mem_addr=>Mem_addr, Mem_we=>Mem_WR, clk=>clk,Mem_do=>Mem_do);
+mem0_60: memory port map(Mem_di=>Mem_di, Mem_addr=>Mem_addr, Mem_we=>Mem_WR, Mem_re=>Mem_RD,clk=>clk,Mem_do=>Mem_do);
 --insert port mappings for memory and MUXes which use their signals
 Zero7 : z9	  	 port map(z9_in => IR_out(7 to 15), z9_out => Z9_out); 
 SignE6: se6       	 port map(se6_in => IR_out(10 to 15), se6_out => SE6_out);

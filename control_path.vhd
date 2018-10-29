@@ -6,10 +6,8 @@ use ieee.std_logic_1164.all;
 entity control_path is
 	port (
 		opcode: in std_logic_vector (0 to 15);
-		current_state: in std_logic_vector(0 to 4);
-		C,Z,alu_z,F0,F1: in std_logic;
-		control_word: out std_logic_vector (0 to 28);
-		next_state: out std_logic_vector ( 0 to  4)
+		C,Z,alu_z,F0,F1,clk: in std_logic;
+		control_word: out std_logic_vector (0 to 28)
 	);
 end entity;
 architecture behave of control_path is
@@ -17,6 +15,7 @@ architecture behave of control_path is
 	signal dec1,dec2,dec3,dec4,dec5,dec6,dec7 : std_logic_vector(0 to 4);
 	signal s1: std_logic;
 	signal alu_op : std_logic_vector(0 to 1);
+	signal current_state, next_state: std_logic_vector(0 to 4);
 	
 	component mux_state is
 		port (
@@ -118,5 +117,12 @@ d7: mux_state port map(inp0=>"10010", inp1=>"00001",s=>F1, z=>dec7);
 		end case;
 	------------------------------
 	end process;
-
+	
+	state_change: process(clk)
+	begin 
+		if (rising_edge(clk)) then
+			current_state<=next_state;
+		end if;
+	end process state_change;
+	
 end behave;
