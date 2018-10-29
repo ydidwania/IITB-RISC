@@ -1,5 +1,5 @@
 Flow report for Multicycle-IITB-RISC
-Sun Oct 28 23:25:51 2018
+Mon Oct 29 15:08:08 2018
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Sun Oct 28 23:25:51 2018       ;
+; Flow Status           ; Successful - Mon Oct 29 15:08:08 2018       ;
 ; Quartus Prime Version ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name         ; Multicycle-IITB-RISC                        ;
 ; Top-level Entity Name ; main                                        ;
@@ -60,7 +60,7 @@ agreement for further details.
 +-------------------+----------------------+
 ; Option            ; Setting              ;
 +-------------------+----------------------+
-; Start date & time ; 10/28/2018 23:25:28  ;
+; Start date & time ; 10/29/2018 15:07:18  ;
 ; Main task         ; Compilation          ;
 ; Revision Name     ; Multicycle-IITB-RISC ;
 +-------------------+----------------------+
@@ -71,7 +71,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------+----------------------+-------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value        ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------+----------------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 220295162002240.154074932806664 ; --                   ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 220295162002240.154080583700914 ; --                   ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                     ; --                   ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)       ; <None>               ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                            ; --                   ; --          ; eda_simulation ;
@@ -91,12 +91,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:17     ; 1.0                     ; 939 MB              ; 00:00:38                           ;
-; Fitter                    ; 00:00:01     ; 1.0                     ; 1027 MB             ; 00:00:01                           ;
-; Assembler                 ; 00:00:00     ; 1.0                     ; 791 MB              ; 00:00:00                           ;
-; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 706 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 1021 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:19     ; --                      ; --                  ; 00:00:40                           ;
+; Analysis & Synthesis      ; 00:00:36     ; 1.0                     ; 935 MB              ; 00:00:42                           ;
+; Fitter                    ; 00:00:07     ; 1.0                     ; 1030 MB             ; 00:00:03                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 791 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 706 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 1022 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:46     ; --                      ; --                  ; 00:00:48                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -93,10 +93,10 @@ d7: mux_state port map(inp0=>"10010", inp1=>"00001",s=>F1, z=>dec7);
 	process(current_state,dec1,dec2,dec3,dec4,dec5,dec6,dec7,alu_op)
 	begin
 		case(current_state) is 
-			when "00001" => control_word<="11010000000000010000000001010"; next_state<="00010";
-			when "00010" => control_word<="00001011000000100000000000000"; next_state<=dec1;
+			when "00001" => control_word<="11010100000000010000000001010"; next_state<="00010";
+			when "00010" => control_word<="00001011000000100000001000000"; next_state<=dec1;
 			when "00011" => control_word<="00000010"& alu_op &"0000000000100010010"; next_state<="10011";
-			when "00100" => control_word<="00000010000000000000100101010"; next_state<="00101";
+			when "00100" => control_word<="00000010000000000000100100000"; next_state<="00101";
 			when "00101" => control_word<="00000100000000001011000000000"; next_state<="00001";
 			when "00110" => control_word<="00000100000000000101000000000"; next_state<="00001";
 			when "00111" => control_word<="00000001000000000000010100010"; next_state<=dec2;
@@ -107,10 +107,10 @@ d7: mux_state port map(inp0=>"10010", inp1=>"00001",s=>F1, z=>dec7);
 			when "01100" => control_word<="10000000000000000000000000101"; next_state<="00001";
 			when "01101" => control_word<="10000100000000000100000000111"; next_state<="00001";
 			when "01110" => control_word<="10000100001000000100000000001"; next_state<="00001";
-			when "01111" => control_word<="01001011000000000000100011010"; next_state<=dec4;
+			when "01111" => control_word<="01001011000100000000100011010"; next_state<=dec4;
 			when "10000" => control_word<="01000111000100000010100011010"; next_state<=dec5;
 			when "10001" => control_word<="00000001000000000000001000000"; next_state<=dec6;
-			when "10010" => control_word<="00100011000100100000101011010"; next_state<=dec7;
+			when "10010" => control_word<="00100011000100000000101011010"; next_state<=dec7;
 			when "10011" => control_word<="00000100000000001111000000000"; next_state<="00001";
 			when others => control_word<="00000000000000000000000000000"; next_state<="00001";
 
