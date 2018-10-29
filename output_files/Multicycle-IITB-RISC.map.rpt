@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Multicycle-IITB-RISC
-Tue Oct 30 00:33:19 2018
+Tue Oct 30 00:39:13 2018
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -65,7 +65,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Oct 30 00:33:19 2018       ;
+; Analysis & Synthesis Status ; Successful - Tue Oct 30 00:39:13 2018       ;
 ; Quartus Prime Version       ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name               ; Multicycle-IITB-RISC                        ;
 ; Top-level Entity Name       ; main                                        ;
@@ -524,7 +524,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Tue Oct 30 00:33:06 2018
+    Info: Processing started: Tue Oct 30 00:39:00 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Multicycle-IITB-RISC -c Multicycle-IITB-RISC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -580,9 +580,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file control
     Info (12022): Found design unit 1: control_path-behave File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 13
     Info (12023): Found entity 1: control_path File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 6
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Info (12128): Elaborating entity "control_path" for hierarchy "control_path:ctrl_path" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/main.vhd Line: 35
+Info (12128): Elaborating entity "control_path" for hierarchy "control_path:ctrl_path" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/main.vhd Line: 34
 Info (12128): Elaborating entity "mux_state" for hierarchy "control_path:ctrl_path|mux_state:d2" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd Line: 31
-Info (12128): Elaborating entity "datapath" for hierarchy "datapath:dat_path" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/main.vhd Line: 37
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:dat_path" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/main.vhd Line: 36
 Info (12128): Elaborating entity "reg_16bit" for hierarchy "datapath:dat_path|reg_16bit:ProgC" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 177
 Info (12128): Elaborating entity "alu" for hierarchy "datapath:dat_path|alu:AritLU" File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd Line: 181
 Warning (10631): VHDL Process Statement warning at ALU.vhd(20): inferring latch(es) for signal or variable "carry", which holds its previous value in one or more paths through the process File: /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd Line: 20
@@ -609,9 +609,9 @@ Info (21057): Implemented 2 device resources after synthesis - the final resourc
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 945 megabytes
-    Info: Processing ended: Tue Oct 30 00:33:19 2018
+    Info: Peak virtual memory: 935 megabytes
+    Info: Processing ended: Tue Oct 30 00:39:13 2018
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Total CPU time (on all processors): 00:00:30
 
 

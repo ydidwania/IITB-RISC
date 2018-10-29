@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Multicycle-IITB-RISC
-Tue Oct 30 00:33:23 2018
+Tue Oct 30 00:39:18 2018
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -69,7 +69,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Tue Oct 30 00:33:22 2018
+    Info: Processing started: Tue Oct 30 00:39:17 2018
 Info: Command: quartus_sta Multicycle-IITB-RISC -c Multicycle-IITB-RISC
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -84,7 +84,7 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 706 megabytes
-    Info: Processing ended: Tue Oct 30 00:33:23 2018
+    Info: Processing ended: Tue Oct 30 00:39:18 2018
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
