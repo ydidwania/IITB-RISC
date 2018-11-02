@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
 
-// DATE "10/30/2018 00:39:19"
+// DATE "11/02/2018 15:40:32"
 
 // 
 // Device: Altera 5M1270ZT144C5 Package TQFP144
@@ -52,23 +52,23 @@ tri1 devoe;
 
 
 // Location: PIN_39,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxv_io \clk~I (
+maxv_io clk_aI(
 	.datain(gnd),
 	.oe(gnd),
 	.combout(),
 	.padio(clk));
 // synopsys translate_off
-defparam \clk~I .operation_mode = "input";
+defparam clk_aI.operation_mode = "input";
 // synopsys translate_on
 
 // Location: PIN_2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxv_io \reset~I (
+maxv_io reset_aI(
 	.datain(gnd),
 	.oe(gnd),
 	.combout(),
 	.padio(reset));
 // synopsys translate_off
-defparam \reset~I .operation_mode = "input";
+defparam reset_aI.operation_mode = "input";
 // synopsys translate_on
 
 endmodule

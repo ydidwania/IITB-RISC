@@ -23,5 +23,5 @@ source_file = 1, /home/jukebox/intelFPGA_lite/16.1/quartus/libraries/vhdl/ieee/t
 source_file = 1, /home/jukebox/intelFPGA_lite/16.1/quartus/libraries/vhdl/ieee/timing_p.vhd
 source_file = 1, /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/db/Multicycle-IITB-RISC.cbx.xml
 design_name = main
-instance = comp, \clk~I , clk, main, 1
-instance = comp, \reset~I , reset, main, 1
+instance = comp, clk_aI, clk, main, 1
+instance = comp, reset_aI, reset, main, 1

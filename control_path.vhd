@@ -28,7 +28,7 @@ architecture behave of control_path is
 begin
 
 
-d2: mux_state port map(inp0=>"01010", inp1=>"01000",s=>s1, z=>dec2);  -- if s1==1, d2=s10 else d2=s8;
+d2: mux_state port map(inp0=>"01000", inp1=>"01010",s=>s1, z=>dec2);  -- if s1==1, d2=s10 else d2=s8;
 d3: mux_state port map(inp0=>"00001", inp1=>"01100",s=>alu_z, z=>dec3);
 d4: mux_state port map(inp0=>"10000", inp1=>"00001",s=>F0, z=>dec4);
 d5: mux_state port map(inp0=>"10000", inp1=>"00001",s=>F1, z=>dec5);

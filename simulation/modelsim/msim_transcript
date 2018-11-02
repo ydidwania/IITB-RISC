@@ -1,305 +1,64 @@
-# do Multicycle-IITB-RISC_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
+# do Multicycle-IITB-RISC_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
 # }
-# vlib rtl_work
-# vmap work rtl_work
+# vlib gate_work
+# vmap work gate_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap work rtl_work 
+# vmap work gate_work 
 # Copying /home/jukebox/intelFPGA_lite/16.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:33:49 on Oct 30,2018
-# vcom -reportprogress 300 -93 -work work /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity mux3bit6to1
-# -- Compiling architecture behave of mux3bit6to1
-# End time: 00:33:49 on Oct 30,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit2to1.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:33:49 on Oct 30,2018
-# vcom -reportprogress 300 -93 -work work /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit2to1.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity mux3bit2to1
-# -- Compiling architecture behave of mux3bit2to1
-# End time: 00:33:49 on Oct 30,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/main.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:33:49 on Oct 30,2018
-# vcom -reportprogress 300 -93 -work work /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/main.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity main
-# -- Compiling architecture behave of main
-# End time: 00:33:49 on Oct 30,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/memory.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:33:49 on Oct 30,2018
-# vcom -reportprogress 300 -93 -work work /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/memory.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity memory
-# -- Compiling architecture comb of memory
-# End time: 00:33:49 on Oct 30,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/z9.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:33:49 on Oct 30,2018
-# vcom -reportprogress 300 -93 -work work /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/z9.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity z9
-# -- Compiling architecture behave of z9
-# End time: 00:33:49 on Oct 30,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:33:49 on Oct 30,2018
-# vcom -reportprogress 300 -93 -work work /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity datapath
-# -- Compiling architecture behave of datapath
-# End time: 00:33:49 on Oct 30,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux2to1.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:33:49 on Oct 30,2018
-# vcom -reportprogress 300 -93 -work work /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux2to1.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity mux2to1
-# -- Compiling architecture behave of mux2to1
-# End time: 00:33:49 on Oct 30,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:33:49 on Oct 30,2018
-# vcom -reportprogress 300 -93 -work work /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity alu
-# -- Compiling architecture behave of alu
-# End time: 00:33:49 on Oct 30,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:33:49 on Oct 30,2018
-# vcom -reportprogress 300 -93 -work work /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux6to1.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity mux6to1
-# -- Compiling architecture behave of mux6to1
-# End time: 00:33:49 on Oct 30,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux4to1.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:33:49 on Oct 30,2018
-# vcom -reportprogress 300 -93 -work work /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux4to1.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity mux4to1
-# -- Compiling architecture behave of mux4to1
-# End time: 00:33:49 on Oct 30,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/se9.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:33:49 on Oct 30,2018
-# vcom -reportprogress 300 -93 -work work /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/se9.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity se9
-# -- Compiling architecture behave of se9
-# End time: 00:33:49 on Oct 30,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/se6.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:33:49 on Oct 30,2018
-# vcom -reportprogress 300 -93 -work work /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/se6.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity se6
-# -- Compiling architecture behave of se6
-# End time: 00:33:49 on Oct 30,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:33:49 on Oct 30,2018
-# vcom -reportprogress 300 -93 -work work /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_file.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity reg_file
-# -- Compiling architecture behave of reg_file
-# End time: 00:33:49 on Oct 30,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_16bit.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:33:49 on Oct 30,2018
-# vcom -reportprogress 300 -93 -work work /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/reg_16bit.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity reg_16bit
-# -- Compiling architecture behave of reg_16bit
-# End time: 00:33:49 on Oct 30,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:33:49 on Oct 30,2018
-# vcom -reportprogress 300 -93 -work work /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/priority_encoder.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity priority_encoder
-# -- Compiling architecture behave of priority_encoder
-# End time: 00:33:49 on Oct 30,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux_state.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:33:49 on Oct 30,2018
-# vcom -reportprogress 300 -93 -work work /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux_state.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity mux_state
-# -- Compiling architecture behave of mux_state
-# End time: 00:33:49 on Oct 30,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:33:49 on Oct 30,2018
-# vcom -reportprogress 300 -93 -work work /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/control_path.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity control_path
-# -- Compiling architecture behave of control_path
-# End time: 00:33:49 on Oct 30,2018, Elapsed time: 0:00:00
+# vlog -vlog01compat -work work +incdir+. {Multicycle-IITB-RISC.vo}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:31:07 on Oct 31,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." Multicycle-IITB-RISC.vo 
+# -- Compiling module main
+# 
+# Top level modules:
+# 	main
+# End time: 23:31:07 on Oct 31,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # 
 # stdin: <EOF>
+vsim gate_work.main
+# vsim gate_work.main 
+# Start time: 23:32:31 on Oct 31,2018
+# Loading gate_work.main
+# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(55): Instantiation of 'maxv_io' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /main File: Multicycle-IITB-RISC.vo
+#         Searched libraries:
+#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(65): Instantiation of 'maxv_io' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /main File: Multicycle-IITB-RISC.vo
+#         Searched libraries:
+#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
+# Error loading design
+# End time: 23:32:31 on Oct 31,2018, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
 vsim work.main
 # vsim work.main 
-# Start time: 00:33:54 on Oct 30,2018
+# Start time: 23:32:34 on Oct 31,2018
+# Loading work.main
+# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(55): Instantiation of 'maxv_io' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /main File: Multicycle-IITB-RISC.vo
+#         Searched libraries:
+#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) Multicycle-IITB-RISC.vo(65): Instantiation of 'maxv_io' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /main File: Multicycle-IITB-RISC.vo
+#         Searched libraries:
+#             /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/simulation/modelsim/gate_work
+# Error loading design
+# End time: 23:32:34 on Oct 31,2018, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vsim rtl_work.alu(behave)
+# vsim rtl_work.alu(behave) 
+# Start time: 23:32:36 on Oct 31,2018
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.main(behave)
-# Loading work.control_path(behave)
-# Loading work.mux_state(behave)
-# Loading work.datapath(behave)
-# Loading work.reg_16bit(behave)
 # Loading ieee.numeric_std(body)
-# Loading work.alu(behave)
-# Loading work.memory(comb)
-# Loading work.z9(behave)
-# Loading work.se6(behave)
-# Loading work.se9(behave)
-# Loading work.priority_encoder(behave)
-# Loading work.reg_file(behave)
-# Loading work.mux4to1(behave)
-# Loading work.mux2to1(behave)
-# Loading work.mux3bit2to1(behave)
-# Loading work.mux3bit6to1(behave)
-# Loading work.mux6to1(behave)
-add wave -position insertpoint  \
-sim:/main/clk
-add wave -position insertpoint  \
-sim:/main/reset
-add wave -position insertpoint  \
-sim:/main/dat_path/PC_E
-add wave -position insertpoint  \
-sim:/main/dat_path/PC_in
-add wave -position insertpoint  \
-sim:/main/dat_path/ALU_sel
-add wave -position insertpoint  \
-sim:/main/dat_path/PC_enable
-add wave -position insertpoint  \
-sim:/main/dat_path/ALU_a
-add wave -position insertpoint  \
-sim:/main/dat_path/ALU_b
-add wave -position insertpoint  \
-sim:/main/dat_path/PC_out
-add wave -position insertpoint  \
-sim:/main/dat_path/ALU_out
-force -freeze sim:/main/reset 1 0
-force -freeze sim:/main/clk 1 0, 0 {50 ps} -r 100
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /main/dat_path/RF
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /main/dat_path/RF
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /main/dat_path/RF
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /main/dat_path/mem0_60
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /main/dat_path/RF
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /main/dat_path/RF
-force -freeze sim:/main/reset 0 0
-add wave -position insertpoint  \
-sim:/main/ctrl_path/current_state
-run
-run
-add wave -position insertpoint  \
-sim:/main/dat_path/RF/r0/q
-add wave -position insertpoint  \
-sim:/main/dat_path/RF/r1/q
-add wave -position insertpoint  \
-sim:/main/dat_path/RF/r2/q
-run
-run
-run
-run
-add wave -position insertpoint  \
-sim:/main/dat_path/t1_out
-add wave -position insertpoint  \
-sim:/main/dat_path/t2_out
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-# End time: 00:38:30 on Oct 30,2018, Elapsed time: 0:04:36
-# Errors: 0, Warnings: 6
+# Loading rtl_work.alu(behave)
+# End time: 23:32:41 on Oct 31,2018, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 0

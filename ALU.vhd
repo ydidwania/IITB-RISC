@@ -24,28 +24,20 @@ architecture behave of alu is
 			case (sel) is
 			
 				when "00" =>			--add without modifying flags
-						op 	:= std_logic_vector(unsigned(alu_a) + unsigned(alu_b));
-						
+					op 	:= std_logic_vector(unsigned(alu_a) + unsigned(alu_b));
 				when "01" =>			--add and modify zero and carry flag
 					op 		:= std_logic_vector(unsigned(alu_a) + unsigned(alu_b));
-					if (alu_a(0) = alu_b(0) and op(0) /= alu_a(0)) then
-						c:='1';
-					else
-						c:='0';
-					end if;
-					carry  <= c;	
-				
 				when "10" =>			--NAND and modify zero flags
 					op := (alu_a nand alu_b);
 				when  others=>
 					op 	:= std_logic_vector(unsigned(alu_a) - unsigned(alu_b));
 		end case;
 		
---		if reset='1' then
---			alu_out<=zero16;
---		else
+		if reset='1' then
+			alu_out<=zero16;
+		else
 			alu_out <= op;
---		end if;
+		end if;
 		
 		if(op = "0000000000000000") then
 			z := '1';
@@ -53,8 +45,23 @@ architecture behave of alu is
 			z :='0';
 		end if;
 		
+		if (alu_a(0) = alu_b(0) and op(0) /= alu_a(0)) then
+			c:='1';
+		else
+			c:='0';
+		end if;
+		
 		a_zero  <= z;
-		if (sel="01" or sel="10") then
+		
+		if reset = '1' then
+			carry <= '0';
+		elsif (sel="01") then
+			carry  <= c;	
+		end if;
+		
+		if reset = '1' then
+			zero <= '0';
+		elsif (sel="01" or sel="10") then
 			zero   <= z;			
 		end if;
 	end process;
