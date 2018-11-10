@@ -22,9 +22,9 @@ V8e]fYM<6:[bG>=d>o16oV0
 !s100 MRfzi2U2_zS3n0KB^8Y861
 Z7 OV;C;10.5b;63
 31
-Z8 !s110 1540997276
+Z8 !s110 1541166737
 !i10b 1
-Z9 !s108 1540997276.000000
+Z9 !s108 1541166737.000000
 Z10 !s90 -reportprogress|300|-93|-work|work|/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd|
 Z11 !s107 /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/ALU.vhd|
 !i113 1
@@ -46,6 +46,281 @@ R8
 R9
 R10
 R11
+!i113 1
+R12
+R13
+Edatapath
+Z14 w1540839285
+R3
+R4
+R0
+Z15 8/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd
+Z16 F/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd
+l0
+L4
+V`[deGhNoLMX=]S6j^dQfQ3
+!s100 8L5e`Sz7WmZbj7@fA:1Nd3
+R7
+31
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-93|-work|work|/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd|
+Z18 !s107 /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/datapath.vhd|
+!i113 1
+R12
+R13
+Abehave
+R3
+R4
+DEx4 work 8 datapath 0 22 `[deGhNoLMX=]S6j^dQfQ3
+l121
+L16
+VdF_5b2jel^hnHi>C60F360
+!s100 ;KZ<G=94zbZmZGX[<GiYG3
+R7
+31
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Emain
+Z19 w1540840136
+R3
+R4
+R0
+Z20 8/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/main.vhd
+Z21 F/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/main.vhd
+l0
+L4
+V9R[WEJU2VNXFH>jRVgDG_1
+!s100 IzQ[7jLnE2M^iMLmeWo9K0
+R7
+31
+Z22 !s110 1541166736
+!i10b 1
+Z23 !s108 1541166736.000000
+Z24 !s90 -reportprogress|300|-93|-work|work|/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/main.vhd|
+Z25 !s107 /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/main.vhd|
+!i113 1
+R12
+R13
+Abehave
+R3
+R4
+DEx4 work 4 main 0 22 9R[WEJU2VNXFH>jRVgDG_1
+l32
+L10
+V1L>2`IG2B<C=i>FOjVQ6Z1
+!s100 F08aRUVlVFzB0EmhZXCDf3
+R7
+31
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 1
+R12
+R13
+Ememory
+Z26 w1541153355
+R2
+R3
+R4
+R0
+Z27 8/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/memory.vhd
+Z28 F/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/memory.vhd
+l0
+L6
+V;US_8GZADO[T5G]aWjQ4?1
+!s100 LhZhSPU_hH;`]<:d`WBW=0
+R7
+31
+R8
+!i10b 1
+R9
+Z29 !s90 -reportprogress|300|-93|-work|work|/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/memory.vhd|
+Z30 !s107 /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/memory.vhd|
+!i113 1
+R12
+R13
+Acomb
+R2
+R3
+R4
+DEx4 work 6 memory 0 22 ;US_8GZADO[T5G]aWjQ4?1
+l61
+L14
+VRWhMfN3Rg8z7=lGHZT>d@3
+!s100 __Wf^Ekk_lC3@dOkLiN[P0
+R7
+31
+R8
+!i10b 1
+R9
+R29
+R30
+!i113 1
+R12
+R13
+Emux2to1
+Z31 w1540839560
+R3
+R4
+R0
+Z32 8/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux2to1.vhd
+Z33 F/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux2to1.vhd
+l0
+L4
+VAS1@lfzKDliD<_UnnC_`02
+!s100 9BHUc7OLgXEQCHI9Ed=6@2
+R7
+31
+R8
+!i10b 1
+R9
+Z34 !s90 -reportprogress|300|-93|-work|work|/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux2to1.vhd|
+Z35 !s107 /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux2to1.vhd|
+!i113 1
+R12
+R13
+Abehave
+R3
+R4
+DEx4 work 7 mux2to1 0 22 AS1@lfzKDliD<_UnnC_`02
+l11
+L10
+VAW97Pj3mRGNz7T?eI8dl]3
+!s100 KN90>d=AJ=_jN?49bQ4Bz2
+R7
+31
+R8
+!i10b 1
+R9
+R34
+R35
+!i113 1
+R12
+R13
+Emux3bit2to1
+Z36 w1540839584
+R3
+R4
+R0
+Z37 8/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit2to1.vhd
+Z38 F/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit2to1.vhd
+l0
+L4
+VJNL7<9CC2Ue;eDRh70^nY3
+!s100 L_zOE^eKMg;M8oS_ZaRbJ2
+R7
+31
+R22
+!i10b 1
+R23
+Z39 !s90 -reportprogress|300|-93|-work|work|/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit2to1.vhd|
+Z40 !s107 /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit2to1.vhd|
+!i113 1
+R12
+R13
+Abehave
+R3
+R4
+DEx4 work 11 mux3bit2to1 0 22 JNL7<9CC2Ue;eDRh70^nY3
+l11
+L10
+V^[QNm<ZeP]4c@]:3YZ4Lz0
+!s100 2]?I6:5`mJU1=MIPCddK^0
+R7
+31
+R22
+!i10b 1
+R23
+R39
+R40
+!i113 1
+R12
+R13
+Emux3bit6to1
+Z41 w1540839572
+R3
+R4
+R0
+Z42 8/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd
+Z43 F/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd
+l0
+L4
+V3QCkGV_5m16I[=cZG8zYT1
+!s100 K<bKQJc41JPlI0Af=QHR_3
+R7
+31
+R22
+!i10b 1
+R23
+Z44 !s90 -reportprogress|300|-93|-work|work|/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd|
+Z45 !s107 /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/mux3bit6to1.vhd|
+!i113 1
+R12
+R13
+Abehave
+R3
+R4
+DEx4 work 11 mux3bit6to1 0 22 3QCkGV_5m16I[=cZG8zYT1
+l11
+L10
+VUB0lYzYHjmbRRU8K:g2j:1
+!s100 E1P:;0_i@2LYZiI3lHfLi3
+R7
+31
+R22
+!i10b 1
+R23
+R44
+R45
+!i113 1
+R12
+R13
+Ez9
+Z46 w1540832474
+R3
+R4
+R0
+Z47 8/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/z9.vhd
+Z48 F/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/z9.vhd
+l0
+L4
+V?UjgP=aRKlAhK_AYA==NF0
+!s100 <ZiM78W3EiP0ImfgEOQ1=0
+R7
+31
+R8
+!i10b 1
+R9
+Z49 !s90 -reportprogress|300|-93|-work|work|/home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/z9.vhd|
+Z50 !s107 /home/jukebox/Desktop/Acads/5-Sem/EE 309/Project1/z9.vhd|
+!i113 1
+R12
+R13
+Abehave
+R3
+R4
+DEx4 work 2 z9 0 22 ?UjgP=aRKlAhK_AYA==NF0
+l12
+L11
+V<lGQLQM2l=g6VEgFl0_ih3
+!s100 TLmJc:nG2[OQNYi_2N;^=3
+R7
+31
+R8
+!i10b 1
+R9
+R49
+R50
 !i113 1
 R12
 R13

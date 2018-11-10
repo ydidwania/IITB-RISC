@@ -8,30 +8,30 @@ generic(
 		one16 : std_logic_vector := "0000000000000001"
 	);
 	port(
-		alu_a,alu_b	: in std_logic_vector(0 to 15);
-	    sel		: in std_logic_vector(0 to 1);
-		 reset:  in std_logic;
+		alu_a,alu_b	   : in std_logic_vector(0 to 15);
+	    sel		      : in std_logic_vector(0 to 1);
+		 reset, rf_wr, clk  :  in std_logic;
 	    alu_out 		: out std_logic_vector(0 to 15);
 	    carry,zero,a_zero  : out std_logic);
 end entity;
 
 architecture behave of alu is
 	begin
-		process(alu_a,alu_b,sel)
+		process(alu_a,alu_b,sel, clk, rf_wr, reset)
 		variable op : std_logic_vector(0 to 15);
 		variable z,c : std_logic :='0';
 		begin
 			case (sel) is
 			
 				when "00" =>			--add without modifying flags
-					op 	:= std_logic_vector(unsigned(alu_a) + unsigned(alu_b));
+					op 		:= std_logic_vector(unsigned(alu_a) + unsigned(alu_b));
 				when "01" =>			--add and modify zero and carry flag
 					op 		:= std_logic_vector(unsigned(alu_a) + unsigned(alu_b));
 				when "10" =>			--NAND and modify zero flags
-					op := (alu_a nand alu_b);
+					op 		:= (alu_a nand alu_b);
 				when  others=>
-					op 	:= std_logic_vector(unsigned(alu_a) - unsigned(alu_b));
-		end case;
+					op 		:= std_logic_vector(unsigned(alu_a) - unsigned(alu_b));
+			end case;
 		
 		if reset='1' then
 			alu_out<=zero16;
@@ -51,17 +51,17 @@ architecture behave of alu is
 			c:='0';
 		end if;
 		
-		a_zero  <= z;
+		a_zero <= z;
 		
 		if reset = '1' then
 			carry <= '0';
-		elsif (sel="01") then
+		elsif (rising_edge(clk) and (sel="01" and rf_wr='0')) then
 			carry  <= c;	
 		end if;
 		
 		if reset = '1' then
 			zero <= '0';
-		elsif (sel="01" or sel="10") then
+		elsif (rising_edge(clk) and (sel="01" or sel="10")) then
 			zero   <= z;			
 		end if;
 	end process;

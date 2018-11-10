@@ -17,10 +17,10 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
 
-// DATE "11/02/2018 15:40:32"
+// DATE "11/04/2018 18:56:11"
 
 // 
-// Device: Altera 5M1270ZT144C5 Package TQFP144
+// Device: Altera EP4CE22F17C6 Package FBGA256
 // 
 
 // 
@@ -31,11 +31,16 @@
 
 module main (
 	clk,
-	reset);
+	reset,
+	clk_50);
 input 	clk;
 input 	reset;
+input 	clk_50;
 
 // Design Ports Information
+// clk	=>  Location: PIN_J15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// reset	=>  Location: PIN_M1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// clk_50	=>  Location: PIN_R8,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -49,26 +54,101 @@ assign unknown = 1'bx;
 tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
-
-
-// Location: PIN_39,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxv_io clk_aI(
-	.datain(gnd),
-	.oe(gnd),
-	.combout(),
-	.padio(clk));
 // synopsys translate_off
-defparam clk_aI.operation_mode = "input";
+initial $sdf_annotate("Multicycle-IITB-RISC_v.sdo");
 // synopsys translate_on
 
-// Location: PIN_2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxv_io reset_aI(
-	.datain(gnd),
-	.oe(gnd),
-	.combout(),
-	.padio(reset));
+wire clk_ainput_o;
+wire reset_ainput_o;
+wire clk_50_ainput_o;
+
+wire clk_ainput_I_driver;
+wire reset_ainput_I_driver;
+wire clk_50_ainput_I_driver;
+
+hard_block auto_generated_inst(
+	.devpor(devpor),
+	.devclrn(devclrn),
+	.devoe(devoe));
+
+cycloneive_routing_wire clk_ainput_I_routing_wire_inst (
+	.datain(clk),
+	.dataout(clk_ainput_I_driver));
+
+// Location: IOIBUF_X53_Y14_N1
+cycloneive_io_ibuf clk_ainput(
+	.i(clk_ainput_I_driver),
+	.ibar(gnd),
+	.o(clk_ainput_o));
 // synopsys translate_off
-defparam reset_aI.operation_mode = "input";
+defparam clk_ainput.bus_hold = "false";
+defparam clk_ainput.simulate_z_as = "z";
 // synopsys translate_on
+
+cycloneive_routing_wire reset_ainput_I_routing_wire_inst (
+	.datain(reset),
+	.dataout(reset_ainput_I_driver));
+
+// Location: IOIBUF_X0_Y16_N22
+cycloneive_io_ibuf reset_ainput(
+	.i(reset_ainput_I_driver),
+	.ibar(gnd),
+	.o(reset_ainput_o));
+// synopsys translate_off
+defparam reset_ainput.bus_hold = "false";
+defparam reset_ainput.simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_routing_wire clk_50_ainput_I_routing_wire_inst (
+	.datain(clk_50),
+	.dataout(clk_50_ainput_I_driver));
+
+// Location: IOIBUF_X27_Y0_N22
+cycloneive_io_ibuf clk_50_ainput(
+	.i(clk_50_ainput_I_driver),
+	.ibar(gnd),
+	.o(clk_50_ainput_o));
+// synopsys translate_off
+defparam clk_50_ainput.bus_hold = "false";
+defparam clk_50_ainput.simulate_z_as = "z";
+// synopsys translate_on
+
+endmodule
+
+module hard_block (
+
+	devpor,
+	devclrn,
+	devoe);
+
+// Design Ports Information
+// ~ALTERA_ASDO_DATA1~	=>  Location: PIN_C1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_FLASH_nCE_nCSO~	=>  Location: PIN_D2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_DCLK~	=>  Location: PIN_H1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_DATA0~	=>  Location: PIN_H2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_nCEO~	=>  Location: PIN_F16,	 I/O Standard: 2.5 V,	 Current Strength: 8mA
+
+input 	devpor;
+input 	devclrn;
+input 	devoe;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+wire a_aALTERA_ASDO_DATA1_a_apadout;
+wire a_aALTERA_FLASH_nCE_nCSO_a_apadout;
+wire a_aALTERA_DATA0_a_apadout;
+wire a_aALTERA_ASDO_DATA1_a_aibuf_o;
+wire a_aALTERA_FLASH_nCE_nCSO_a_aibuf_o;
+wire a_aALTERA_DATA0_a_aibuf_o;
+
+wire a_aALTERA_ASDO_DATA1_a_aibuf_I_driver;
+wire a_aALTERA_FLASH_nCE_nCSO_a_aibuf_I_driver;
+wire a_aALTERA_DATA0_a_aibuf_I_driver;
 
 endmodule

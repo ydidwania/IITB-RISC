@@ -3,6 +3,7 @@ clk => control_path:ctrl_path.clk
 clk => datapath:dat_path.clk
 reset => control_path:ctrl_path.reset
 reset => datapath:dat_path.reset
+clk_50 => ~NO_FANOUT~
 
 
 |main|control_path:ctrl_path
@@ -307,6 +308,7 @@ ctrl_word[7] => reg_16bit:Temp2.enable
 ctrl_word[6] => reg_16bit:Temp1.enable
 ctrl_word[5] => a_select[1].IN1
 ctrl_word[5] => PC_enable.IN1
+ctrl_word[5] => alu:AritLU.rf_wr
 ctrl_word[5] => reg_file:RF.wr_en
 ctrl_word[4] => priority_encoder:PE.rst
 ctrl_word[3] => reg_16bit:IntsR.enable
@@ -836,6 +838,7 @@ reset => alu_out.OUTPUTSELECT
 reset => alu_out.OUTPUTSELECT
 reset => carry$latch.ACLR
 reset => zero$latch.ACLR
+rf_wr => process_0.IN1
 alu_out[15] <= alu_out.DB_MAX_OUTPUT_PORT_TYPE
 alu_out[14] <= alu_out.DB_MAX_OUTPUT_PORT_TYPE
 alu_out[13] <= alu_out.DB_MAX_OUTPUT_PORT_TYPE

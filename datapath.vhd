@@ -74,7 +74,7 @@ end component;
 component alu is
 	port(alu_a,alu_b	: in std_logic_vector(0 to 15);
 	     sel		: in std_logic_vector(0 to 1);
-		  reset:  in std_logic;
+		  reset, rf_wr, clk:  in std_logic;
 	     alu_out 		: out std_logic_vector(0 to 15);
 	     carry,zero,a_zero  : out std_logic);
 end component;
@@ -178,7 +178,7 @@ ProgC : reg_16bit 	 port map(d => PC_in, clk => clk, reset=>reset, enable => PC_
 IntsR : reg_16bit 	 port map(d => Mem_do, clk => clk, reset=>reset, enable => IR_E, q => IR_out); 			-- IR register
 Temp1 : reg_16bit 	 port map(d => t1_in, clk => clk, reset=>reset, enable => t1, q => t1_out); 				-- t1 register
 Temp2 : reg_16bit 	 port map(d => t2_in, clk => clk, reset=>reset, enable => t2, q => t2_out); 				-- t2 register
-AritLU: ALU       	 port map(alu_a => ALU_a, alu_b => ALU_b, sel => ALU_sel,reset=>reset, alu_out => ALU_out,
+AritLU: ALU       	 port map(alu_a => ALU_a, alu_b => ALU_b, sel => ALU_sel, rf_wr=>RF_WR, reset=>reset, clk=>clk, alu_out => ALU_out,
 				  carry => carry, zero => zero, a_zero => alu_zero); 				-- ALU
 mem0_60: memory port map(Mem_di=>Mem_di, Mem_addr=>Mem_addr, Mem_we=>Mem_WR, Mem_re=>Mem_RD,clk=>clk,Mem_do=>Mem_do);
 --insert port mappings for memory and MUXes which use their signals

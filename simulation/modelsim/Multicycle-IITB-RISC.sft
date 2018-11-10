@@ -1,4 +1,5 @@
 set tool_name "ModelSim-Altera (Verilog)"
 set corner_file_list {
-    {{"Slow Model"} {Multicycle-IITB-RISC.vo Multicycle-IITB-RISC_v.sdo}}
+    {{"Slow -6 1.2V 85 Model"} {Multicycle-IITB-RISC_6_1200mv_85c_slow.vo Multicycle-IITB-RISC_6_1200mv_85c_v_slow.sdo}}
+    {{"Fast -M 1.2V 0 Model"} {Multicycle-IITB-RISC_min_1200mv_0c_fast.vo Multicycle-IITB-RISC_min_1200mv_0c_v_fast.sdo}}
 }
